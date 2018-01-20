@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
+	disableTheme="true" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.data>
+		<xp:dominoDocument var="docConfig" formName="fHome"
+			action="openDocument">
+			<xp:this.documentId><![CDATA[#{javascript:var cView = database.getView( "vConfig" );
+var cDoc  = cView.getFirstDocument();
+return cDoc.getUniversalID();}]]></xp:this.documentId>
+		</xp:dominoDocument>
+		<xp:dominoView var="vBlogs">
+			<xp:this.categoryFilter><![CDATA[#{javascript:if(param.get("cat") != null) return param.get("cat");}]]></xp:this.categoryFilter>
+			<xp:this.viewName><![CDATA[#{javascript:return (param.get("cat") != null) ? "vBlogsPublicOnlyByCat" : "vBlogsPublicOnly";}]]></xp:this.viewName>
+		</xp:dominoView>
+	</xp:this.data>
+
+	<xp:this.pageTitle><![CDATA[#{javascript:var siteTitle = getProfileValue("site_title");
+var title = "ブログ";
+return title +" | " + siteTitle;}]]></xp:this.pageTitle>
+
+	<xc:resources></xc:resources>
+	<div id="wrapper">
+		<xc:header>
+		</xc:header>
+		<section class="sitemapSection">
+			<div class="container" style="margin-bottom:50px;">
+		<div class="title1Wrap">
+			<xp:div styleClass="title1">
+				<xp:text escape="true" tagName="h2" id="h2text">
+					<xp:this.value><![CDATA[#{javascript:var retVal = "ブログ";
+	if(param.get("cat") != null) retVal += " / カテゴリー： " + param.get("cat");
+	return retVal;}]]></xp:this.value>
+				</xp:text>
+			</xp:div>
+		</div>
+	
+		<main role="main">
+	
+			<!--▼START contents1Wrap-->
+			<div class="contents1Wrap">
+				<div class="contents1 clearfix">
+					<div class="row">
+						<div class="col-lg-8 blogs">
+							<dl class="dl1">
+								<xp:repeat id="repeat1" rows="1000" var="entry" value="#{vBlogs}">
+									<div class="blog">
+										<xp:link escape="true" id="link2" styleClass="img-link">
+											<xp:this.value><![CDATA[#{javascript:"/blog.xsp?action=openDocument&documentId="+entry.getDocument().getUniversalID();}]]></xp:this.value>
+											<xp:image url="/noimage.gif"
+												id="image1">
+												<xp:this.rendered><![CDATA[#{javascript:return (entry.getDocument().getFirstItem("thumbnail") == null);}]]></xp:this.rendered>
+											</xp:image>
+											<xp:image id="image4">
+												<xp:this.rendered><![CDATA[#{javascript:return (entry.getDocument().getFirstItem("thumbnail") != null);}]]></xp:this.rendered>
+												<xp:this.url><![CDATA[#{javascript:return getAttachmentImageURL(entry.getDocument(),"thumbnail");}]]></xp:this.url>
+												<xp:this.alt><![CDATA[#{javascript:entry.getColumnValues()[2]}]]></xp:this.alt>
+											</xp:image>
+										</xp:link>
+										<div class="blog-entry">
+											<h3>
+												<xp:link escape="true" id="link1">
+													<xp:this.text><![CDATA[#{javascript:entry.getColumnValues()[2];}]]></xp:this.text>
+													<xp:this.value><![CDATA[#{javascript:"/blog.xsp?action=openDocument&documentId="+entry.getDocument().getUniversalID();}]]></xp:this.value>
+												</xp:link>
+											</h3>
+											<xp:text escape="true" id="computedField1">
+												<xp:this.value><![CDATA[#{javascript:"投稿日:"+I18n.toString(entry.getColumnValues()[1].toJavaDate(), "yyyy/MM/dd");}]]></xp:this.value>
+											</xp:text>
+											<br />
+											<xe:djextListTextBox
+												id="category">
+												<xe:this.multipleSeparator><![CDATA["\n"]]></xe:this.multipleSeparator>
+												<xp:this.value><![CDATA[#{javascript:entry.getDocument().getItemValue("category");}]]></xp:this.value>
+											</xe:djextListTextBox>
+										</div>
+									</div>
+								</xp:repeat>
+	
+							</dl>
+						</div>
+						<div class="col-lg-4">
+							<div class="navWrap">
+								<h5 class="ttl2">
+									<span>カテゴリー</span>
+								</h5>
+								<div class="nav">
+									<xe:tagCloud id="tagCloud1">
+										<xe:this.cloudData>
+											<xe:dominoViewCloudData viewName="vBlogCat"
+												sortTags="weight" linkRequestParam="cat" linkTargetPage="/blogs.xsp">
+											</xe:dominoViewCloudData>
+										</xe:this.cloudData>
+									</xe:tagCloud>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--▲END contents1Wrap-->
+	
+		</main>
+			</div>
+		</section>
+		<xc:footer></xc:footer>
+	</div>
+</xp:view>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='492580C6000192B4'>
+<noteinfo noteid='276' unid='46811BE93ACC76B549257E5F0027CC88' sequence='7'>
+<created><datetime>20150609T161442,64+09</datetime></created>
+<modified><datetime>20170213T091712,72+09</datetime></modified>
+<revised><datetime>20151026T132832,83+09</datetime></revised>
+<lastaccessed><datetime>20170213T091712,72+09</datetime></lastaccessed>
+<addedtofile><datetime>20170213T091712,72+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFMIYO</name><name>CN=Takeshi Yoshida/O=solxyz</name><name
+>CN=Surface Administrator/O=EFMIYO</name><name>CN=Ktrick Admin/O=Ktrick</name><name
+>CN=XPages Admin/O=XPages</name></updatedby>
+<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<item name='$TITLE'><text>$DBIcon</text></item>
+<item name='$Flags'><text>34Ci~Q</text></item>
+<item name='$ImagesWide' sign='true'><number>1</number></item>
+<item name='$ImagesHigh' sign='true'><number>1</number></item>
+<item name='$ImagesColorize' sign='true'><number>0</number></item>
+<item name='$FileSize' sign='true'><number>1230</number></item>
+<item name='$ImageData' sign='true'>
+<rawitemdata type='1'>
+mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAIAAAAAAM4EAAABAAAAAQAAAAAAAAB8
+ANgEAADOBM4EiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAAK/INwWK
+6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAARgSURBVHja3FZLS2NJGK26
+jyQaY6ImtmhgHHUQHyAqKKiIy1HcioPiamBcuuiNv2FW8ycGBKVBaF34BI02CIPobsDW0fiImkTz
+Trz3VvVJys6kM+nYgXYzH3itVL4653ucr24o55y8pknkle3VCZQi36F2KKDEOZM4ZRLFFmWZbYkT
+TgnjFPFhnxYBoUV7wBnXOZHhhSUlBs2sscOIIXOJZSpAqUy+zqEUzY8SLhna3/zBA2TZ9jMxv6GM
+svhfevSDoTaq9mEi2cDwcol4xmjGckvEWFz3/i753xkKYS6vyf2WPfmezt/KkSPDZCbuP1TnLyRd
+rn9PMcZ0XQeOoih4SvisaVoymYzFYolEwjCMXH6m+ZTwB0o0iSVYeJ1rCR4/JtFjQjVTKmjEdwj/
+wh84wWDQ7/dHIhFRfAX/np6eUqkUmLCGh8lkslgs4E+LTHHo5W4p9VFmumz5CX+y+oNkqZUSHw1q
+kdQfRR0BBYRoNCpCxHGr1SpJ0nOTAR3LmFjjqapqZWUl/AjR9bCH3f2pK2bV9Ru3dipMMx7e6aH3
+1NRmcv4qWd4wgz+GQuFwWFSmoqKipqYGCF+oCLjghxP4BQ34bTZbpU2VVTM1DF2CKFUlMzeQEGEp
+mcoaMSdjkYdgKB5Pihba7fba2lqRfb5MsYjH44FAAGnyZyNl5nJHldVmd8jpfBlPE0CvkC1NxGL3
+/iBqbRgacACKwF0uVy56gTkAx+3tLbL5zJGOC+VyOp0oq9BYIpEMBgL+gB/NE6dQkIaGBviIur8w
+aDh2c3ODVISisl1BcdF/FBpRI8v0YZo+jpAbGxtRGVpoIApPMlC8Xi9oBHqu5bpBOfDs6upC+P+N
+vdgkI6i6urr7+3shZ4GbRQcoMnh8fPT5fJ2dnfX19V9DL3ZVgEOMiCAQ84mQoWZAh0IhTAwmFGOF
+zfLy8pIJ/skYItUzBib0Hx+xMD4b9g8PDxH++Pg4JFTCbXp5ebm5uSn6LAjghjDRZNDgJkDUggNJ
+4NnX1zc5OQkVfRPB1dXV9vY2xJpFr66u7unpaWlpKSsrA/Tx8fHW1paQgPDBs6OjY2pqqrm5OU9L
++QRnZ2c7Ozt3d3fiJDoBkfT29mKCsieBC415PJ7d3V1kCQR4IhW32w2OoaEhWZYLE1xfX6+trUEb
+IjSkPDAw0N7enr1Y8qR8cHCwtLR0cnKCNY6gPVVVVTMzM6Ojo2azOZ8AKW9sbKA+iAUf29rahoeH
+cwMv8MLjHP7Ly8vr6+uQluBAqyYmJqanpzH/mZcsY4A4Pz9HV8GBwAGKmkDgRcSXN277+/uLi4tQ
+lNAYSjQ2NjY7O4uipTNAxVdWVi4uLuCNXr0YeEEDCMq1sLCA8RQC6+/vn5+fl+fm5lZXVyF5XDWD
+g4MjIyMOh0PcMyUR4Crs7u5GyKenp1Ag4sbln8aBqI+OjjAsTU1N+LrI0H+jIda9vT28rFpbW59L
+lNe3UmMv7Zfd90X/X/w2fXWCTwIMADogQtokFuLFAAAAAElFTkSuQmCC
+</rawitemdata></item>
+<item name='$MimeType' sign='true'><text>image/png</text></item>
+<item name='$FileModDT' sign='true'><datetime>20150720T171626,11+09</datetime></item>
+<item name='$ImageNames' sign='true'><text>C:\Users\Kazunori\Desktop\work\IBM\xpagesjp\android-icon-32x32.png</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item></note>
+

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.data>
+		<xp:dominoView var="view1" viewName="vBlogs" databaseName="xpagesjp\xpagesjp.nsf">
+		</xp:dominoView>
+	</xp:this.data>
+	<xp:label id="label1" value="ブログ一覧"
+		style="font-weight:bold;color:rgb(0,0,160);font-size:16pt">
+	</xp:label>
+	&#160;
+	<xp:br></xp:br>
+	<xp:button value="新規作成" id="button1">
+		<xp:eventHandler event="onclick" submit="true"
+			refreshMode="complete">
+			<xp:this.action>
+				<xp:openPage name="/xpForm06Blogs.xsp"
+					target="newDocument">
+				</xp:openPage>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+	<xp:br></xp:br>
+
+
+	<xp:viewPanel value="#{view1}" id="viewPanel1"
+		viewStyle="width:100%" pageName="/xpForm06Blogs.xsp">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+
+		<xp:viewColumn columnName="date" id="viewColumn1">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="Date" xp:key="header"
+					id="viewColumnHeader1">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="publicStatus" id="viewColumn3">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="公開ステータス" xp:key="header"
+					id="viewColumnHeader3">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="publicScheduledInfo" id="viewColumn7">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="予約状況" xp:key="header"
+					id="viewColumnHeader7">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="title" id="viewColumn2"
+			displayAs="link">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="タイトル" xp:key="header"
+					id="viewColumnHeader2">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="category" id="viewColumn4">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="Category" xp:key="header"
+					id="viewColumnHeader4">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="tags" id="viewColumn5">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="Tags" xp:key="header"
+					id="viewColumnHeader5">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+		<xp:viewColumn columnName="icon" id="viewColumn6">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="Icon" xp:key="header"
+					id="viewColumnHeader6">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		</xp:viewColumn>
+	</xp:viewPanel>
+
+</xp:view>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="492580C6000192B4" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="162" sequence="15" unid="85CFFBC28969E18049257E45001A9799">
+<created><datetime>20150514T135027,45+09</datetime></created>
+<modified><datetime>20170213T091711,34+09</datetime></modified>
+<revised><datetime>20151026T132828,19+09</datetime></revised>
+<lastaccessed><datetime>20170213T091711,34+09</datetime></lastaccessed>
+<addedtofile><datetime>20170213T091711,34+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrator/O=XPagesChannel</name><name>CN=Domino Administrator/O=EFMIYO</name><name>CN=Domino Administrator/O=EFLAB</name><name>CN=Domino Administrator/O=EFMIYO</name><name>CN=Takeshi Yoshida/O=solxyz</name><name>CN=Surface Administrator/O=EFMIYO</name><name>CN=Ktrick Admin/O=Ktrick</name><name>CN=XPages Admin/O=XPages</name></updatedby>
+<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<item name="$Flags"><text>D34C=Q</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$FileModDT" sign="true"><datetime>20140214T131140,00+09</datetime></item>
+<item name="$MimeCharSet" sign="true"><text>Shift_JIS</text></item>
+<item name="$TITLE" sign="true"><text>css/overwrite.css</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+
+<item name="$FileNames" sign="true"><text>css_2foverwrite.css</text></item></note>

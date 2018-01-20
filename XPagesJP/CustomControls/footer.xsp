@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<footer>
+		<div class="container">
+<!-- 		
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">
+							お問い合わせ
+							</h5>
+						<address>
+							<strong>
+								<xp:text escape="true">
+									<xp:this.value><![CDATA[#{javascript:return docConfig.getItemValueArray( "contact_us" )[0];}]]></xp:this.value>
+								</xp:text>
+							</strong>
+						</address>
+						<p>
+							<i class="fa fa-phone"></i>
+							<xp:text escape="true" style="margin-left:5px">
+								<xp:this.value><![CDATA[#{javascript:return docConfig.getItemValueArray( "contact_phone" )[0];}]]></xp:this.value>
+							</xp:text>
+
+
+							<br />
+							<i class="fa fa-envelope-o"></i>
+							<xp:text escape="true" style="margin-left:5px">
+								<xp:this.value><![CDATA[#{javascript:return docConfig.getItemValueArray( "contact_email" )[0];}]]></xp:this.value>
+							</xp:text>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="widget">
+						<h5 class="widgetheading">リンク</h5>
+						<xp:repeat id="repeat1" value="#{docConfig.footer_page_list}"
+							indexVar="idx">
+							<xp:this.rows><![CDATA[#{javascript:var hoge = docConfig.getItemValueArray( "footer_page_list" );
+hoge.length;}]]></xp:this.rows>
+							<xp:table>
+								<xp:tr>
+									<xp:td id="td1">
+										<li>
+											<xp:link escape="true">
+												<xp:this.text><![CDATA[#{javascript:var tmp = docConfig.getItemValueArray( "footer_page_list" );
+var hoge = tmp[idx];
+var pos = tmp[idx].indexOf( "," );
+return hoge.substring( 0, pos );}]]></xp:this.text>
+
+
+												<xp:this.value><![CDATA[#{javascript:var tmp = docConfig.getItemValueArray( "footer_page_list" );
+var hoge = tmp[idx];
+var pos = tmp[idx].indexOf( "," );
+return hoge.substring( pos+1, hoge.length );}]]></xp:this.value>
+											</xp:link>
+										</li>
+									</xp:td>
+								</xp:tr>
+							</xp:table>
+
+
+						</xp:repeat>
+						<ul class="link-list">
+
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3">
+				</div>
+				<div class="col-lg-3">
+				</div>
+			</div>
+		</div>
+		<div id="sub-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="copyright">
+							<p>
+								<span>
+									All Rights Reserved
+									</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<ul class="social-network">
+							<li>
+								<xp:link escape="true" title="Facebook">
+									<xp:this.value><![CDATA[#{javascript:docConfig.getItemValueString( "facebookAccount" )}]]></xp:this.value>
+									<i class="fa fa-facebook"></i>
+								</xp:link>
+							</li>
+							<li>
+								<xp:link escape="true" title="Twitter">
+									<xp:this.value><![CDATA[#{javascript:docConfig.getItemValueString( "twitterAccount" )}]]></xp:this.value>
+									<i class="fa fa-twitter"></i>
+								</xp:link>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+ -->
+		</div>
+	</footer>
+
+</xp:view>

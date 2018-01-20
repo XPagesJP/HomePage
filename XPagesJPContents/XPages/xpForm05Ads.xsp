@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"><xp:this.data>
+    <xp:dominoDocument computeWithForm="both"
+    	databaseName="xpagesjp.nsf" formName="fAds"
+    	var="document1" />
+</xp:this.data>
+	<xp:button id="button1" value="閉じる"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/xpView05Ads.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:button value="保存して閉じる" id="button5"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+
+		<xp:actionGroup>
+			<xp:saveDocument var="document1"></xp:saveDocument>
+
+
+
+
+
+			<xp:openPage name="/xpView05Ads.xsp"></xp:openPage>
+		</xp:actionGroup>
+	</xp:this.action></xp:eventHandler></xp:button>&#160;<xp:button id="button2" value="保存"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:saveDocument var="document1"></xp:saveDocument>
+	</xp:this.action></xp:eventHandler></xp:button>
+	
+	<xp:button id="button3" value="削除">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh" immediate="true">
+			<xp:this.action>
+				<xp:deleteDocument name="/xpView05Ads.xsp"
+					message="削除してもよろしいですか？" var="document1">
+				</xp:deleteDocument>
+			</xp:this.action></xp:eventHandler>
+	</xp:button>
+
+	<xp:button id="button4" value="キャンセル">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh" immediate="true">
+			<xp:this.action>
+				<xp:openPage name="/xpView05Ads.xsp"></xp:openPage>
+			</xp:this.action></xp:eventHandler></xp:button><xp:br></xp:br>
+	<xp:table style="width:100%">
+		<xp:tr>
+			<xp:td
+				style="width:100px;background-color:rgb(128,128,255)">
+				<xp:label value="表示順序：" id="num_Label1" for="num1"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.num}" id="num1"
+					style="width:100px" required="true">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+					<xp:this.validators>
+						<xp:validateRequired message="表示順序は必須入力です。"></xp:validateRequired>
+					</xp:this.validators></xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label id="title_Label1"
+					for="title1" value="タイトル：">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.title}" id="title1"
+					style="width:100%" required="true">
+				<xp:this.validators>
+					<xp:validateRequired message="タイトルは必須入力です。"></xp:validateRequired>
+				</xp:this.validators></xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label value="画像：" id="img_Label1" for="img1"></xp:label>
+			</xp:td>
+			<xp:td>
+
+			<xp:fileDownload rows="30" id="fileDownload1"
+				displayLastModified="false" allowDelete="true"
+				value="#{document1.img}" hideWhen="true" displaySize="false"
+				displayType="false">
+			</xp:fileDownload>
+			<xp:fileUpload id="fileUpload1" value="#{document1.img}"
+				style="width:90%">
+			<xp:eventHandler event="onchange" submit="true"
+				refreshMode="complete">
+				<xp:this.action><![CDATA[#{javascript:// 行進用}]]></xp:this.action>
+			</xp:eventHandler></xp:fileUpload></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label value="説明：" id="description_Label1"
+					for="description1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+
+			<xp:inputTextarea value="#{document1.description}"
+				id="description1" style="width:100%;height:100px">
+			</xp:inputTextarea></xp:td>
+</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label value="URL：" id="url_Label1" for="url1"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.url}" id="url1"
+					style="width:100%" required="true">
+				<xp:this.validators>
+					<xp:validateRequired message="URL は必須入力です。"></xp:validateRequired>
+				</xp:this.validators></xp:inputText>
+			</xp:td>
+		</xp:tr>
+	</xp:table></xp:view>

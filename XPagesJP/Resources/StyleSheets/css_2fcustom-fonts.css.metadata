@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="492580C6000192B4" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="156" sequence="12" unid="D6EADBB02D16504249257E45001A9796">
+<created><datetime>20150514T135027,42+09</datetime></created>
+<modified><datetime>20170213T091711,28+09</datetime></modified>
+<revised><datetime>20151026T132828,14+09</datetime></revised>
+<lastaccessed><datetime>20170213T091711,28+09</datetime></lastaccessed>
+<addedtofile><datetime>20170213T091711,28+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Administrator/O=XPagesChannel</name><name>CN=Domino Administrator/O=EFMIYO</name><name>CN=Domino Administrator/O=EFLAB</name><name>CN=Domino Administrator/O=EFMIYO</name><name>CN=Takeshi Yoshida/O=solxyz</name><name>CN=Surface Administrator/O=EFMIYO</name><name>CN=Ktrick Admin/O=Ktrick</name><name>CN=XPages Admin/O=XPages</name></updatedby>
+<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<item name="$Flags"><text>D34C=Q</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+
+<item name="$FileModDT" sign="true"><datetime>20140214T033838,00+09</datetime></item>
+
+<item name="$FileNames" sign="true"><text>custom-fonts.css</text></item>
+<item name="$MimeCharSet" sign="true"><text>Shift_JIS</text></item>
+<item name="$TITLE" sign="true"><text>css/custom-fonts.css</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

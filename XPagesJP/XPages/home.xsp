@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom" pageTitle="XPagesJP"
+	pageIcon="#{javascript:sessionScope.favicon;}">
+
+	<xp:this.data>
+		<xp:dominoDocument var="docConfig" formName="fHome"
+			action="openDocument">
+			<xp:this.documentId><![CDATA[#{javascript:var cView = database.getView( "vConfig" );
+var cDoc  = cView.getFirstDocument();
+return cDoc.getUniversalID();}]]></xp:this.documentId>
+		</xp:dominoDocument>
+		<xp:dominoView var="vSlides" viewName="vSlides"></xp:dominoView>
+		<xp:dominoView var="vConts" viewName="vConts"></xp:dominoView>
+	</xp:this.data>
+
+	<xc:resources></xc:resources>
+	
+	<div id="wrapper">
+		<xc:header></xc:header>
+		<section id="featured">
+			<!-- start slider -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Slider -->
+						<div id="main-slider" class="flexslider">
+							<ul class="slides">
+								<xp:repeat
+									rows="#{javascript:vSlides.getAllReadEntries().getCount()}"
+									value="#{javascript:vSlides}" var="vsRowData">
+									<li>
+										<xp:image>
+											<xp:this.url><![CDATA[#{javascript:vsRowData.getColumnValue( "AttachmentFile" )}]]></xp:this.url>
+										</xp:image>
+										<div class="flex-caption">
+											<xp:text escape="true"
+												styleClass="h3">
+												<xp:this.value><![CDATA[#{javascript:vsRowData.getColumnValue( "title" )}]]></xp:this.value>
+											</xp:text>
+											<xp:paragraph>
+												<xp:text
+													escape="false">
+													<xp:this.value><![CDATA[#{javascript:vsRowData.getColumnValue( "description" )}]]></xp:this.value>
+												</xp:text>
+											</xp:paragraph>
+											<xp:link escape="true"
+												styleClass="btn btn-theme">
+												<xp:this.text><![CDATA[#{javascript:vsRowData.getColumnValue( "btnLabel" )}]]></xp:this.text>
+												<xp:this.value><![CDATA[#{javascript:vsRowData.getColumnValue( "url" )}]]></xp:this.value>
+												<xp:this.rendered><![CDATA[#{javascript:vsRowData.getColumnValue( "url" ) != ""}]]></xp:this.rendered>
+											</xp:link>
+										</div>
+									</li>
+								</xp:repeat>
+							</ul>
+						</div>
+						<!-- end slider -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="callaction">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="big-cta">
+							<div class="cta-text">
+								<h2>
+									<span>
+										XPages.jp で XPages を試す、XPages
+										を知る
+									</span>
+								</h2>
+								XPages で作成されたアプリケーションの紹介や OpenNTF XPages
+								Extension Library の日本語での動作が確認できます。
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="row">
+							<xp:repeat
+								rows="#{javascript:vConts.getAllEntries().getCount()}"
+								indexVar="vcIdx" var="vcRows" value="#{javascript:vConts}">
+
+								<!--　タイトルが2重に表示されない方がデザイン的によいかと考え、コメントアウト。それにあわせて、マージンの調整。最終的には CSS を調整した方がよい。　-->
+								<div class="col-lg-3"
+									style="padding-top: 15px;padding-bottom: 15px">
+
+									<!--
+										<div class="col-lg-3">
+										<xp:text escape="true">
+										<xp:this.value><![CDATA[#{javascript:vcRows.getColumnValue( "title" )}]]></xp:this.value>
+										</xp:text>
+									-->
+
+									<div class="box">
+										<div
+											class="box-gray aligncenter">
+											<h4>
+												<xp:text
+													escape="true">
+													<xp:this.value><![CDATA[#{javascript:vcRows.getColumnValue( "title" )}]]></xp:this.value>
+												</xp:text>
+											</h4>
+											<div class="icon">
+												<i
+													class="#{javascript:vcRows.getColumnValue( 'icon' )}">
+												</i>
+											</div>
+											<p>
+												<xp:text
+													escape="true">
+													<xp:this.value><![CDATA[#{javascript:vcRows.getColumnValue( "description" )}]]></xp:this.value>
+												</xp:text>
+											</p>
+										</div>
+										<div class="box-bottom">
+											<xp:link escape="true"
+												target="_blank">
+												<xp:this.text><![CDATA[#{javascript:vcRows.getColumnValue( "btnLabel" )}]]></xp:this.text>
+												<xp:this.value><![CDATA[#{javascript:vcRows.getColumnValue( "url" )}]]></xp:this.value>
+											</xp:link>
+										</div>
+									</div>
+								</div>
+							</xp:repeat>
+						</div>
+					</div>
+				</div>
+				<!-- divider -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline"></div>
+					</div>
+				</div>
+				<!-- end divider -->
+				<!-- Portfolio Projects -->
+				<xc:portfolios maxNum="8"></xc:portfolios>
+<!-- 				
+				<div class="row">
+					<div class="col-lg-12">
+						<h4 class="heading">私たちはXPagesを使っています</h4>
+						<div class="row">
+							<section id="projects">
+								<xp:panel>
+									<xp:this.data>
+										<xp:dominoView var="view1"
+											viewName="vAds">
+										</xp:dominoView>
+									</xp:this.data>
+									<ul id="thumbs" class="portfolio">
+										<xp:repeat id="repeat2"
+											rows="30" value="#{javascript:view1}" var="vRows"
+											indexVar="vIdx">
+											<li class="col-lg-3 design"
+												data-id="id-0" data-type="web">
+												<div
+													class="item-thumbs">
+													<a
+														class="hover-wrap fancybox" data-fancybox-group="gallery"
+														title="#{javascript:vRows.getColumnValue('title')}"
+														href="#{javascript:vRows.getColumnValue('AttachmentFile')}">
+														<span
+															class="overlay-img">
+														</span>
+														<span
+															class="overlay-img-thumb font-icon-plus">
+														</span>
+													</a>
+													<xp:image
+														url="#{javascript:vRows.getColumnValue('AttachmentFile')}"
+														alt="#{javascript:vRows.getColumnValue('description')}">
+													</xp:image>
+												</div>
+											</li>
+										</xp:repeat>
+									</ul>
+								</xp:panel>
+
+							</section>
+						</div>
+					</div>
+ 				</div>
+ -->
+				<!-- divider -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline"></div>
+					</div>
+				</div>
+				<!-- end divider -->
+				<!-- Social widget embedding -->
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="widget">
+							<h5 class="widgetheading">Facebook</h5>
+							<xp:text escape="false"
+								value="#{docConfig.facebookWidget}" contentType="html">
+							</xp:text>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="widget">
+							<h5 class="widgetheading">Twitter</h5>
+							<xp:text escape="false"
+								value="#{docConfig.twitterWidget}" contentType="html">
+							</xp:text>
+						</div>
+					</div>
+				</div>
+				<!-- end of Social widget -->
+			</div>
+		</section>
+		<!-- footer Start -->
+		<xc:footer></xc:footer>
+		<!-- footer end -->
+	</div>
+	<a href="#" class="scrollup">
+		<i class="fa fa-angle-up active"></i>
+	</a>
+	<xp:scriptBlock id="scriptBlock1">
+		<xp:this.value><![CDATA[(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));]]></xp:this.value>
+	</xp:scriptBlock>
+</xp:view>

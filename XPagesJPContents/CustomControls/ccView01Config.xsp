@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.data>
+		<xp:dominoView var="view1" databaseName="xpagesjp.nsf"
+			viewName="vConfig">
+		</xp:dominoView>
+	</xp:this.data>
+	<xp:label id="label1" value="01.環境設定文書" style="font-weight:bold;color:rgb(0,0,160);font-size:16pt"></xp:label>
+	<xp:br></xp:br><xp:button value="新規設定文書作成" id="button1">
+		
+	<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+		<xp:this.action>
+			<xp:openPage name="/xpForm01Config.xsp"
+				target="newDocument">
+			</xp:openPage>
+		</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	
+
+	<xp:viewPanel value="#{view1}" id="viewPanel1" viewStyle="width:100%" pageName="/xpForm01Config.xsp">
+		<xp:this.facets>
+			<xp:pager partialRefresh="true" layout="Previous Group Next"
+				xp:key="headerPager" id="pager1">
+			</xp:pager>
+		</xp:this.facets>
+		
+		<xp:viewColumn columnName="$1" id="viewColumn2" displayAs="link">
+			<xp:this.facets>
+				<xp:viewColumnHeader value="タイトル" xp:key="header"
+					id="viewColumnHeader2">
+				</xp:viewColumnHeader>
+			</xp:this.facets>
+		<xp:this.value><![CDATA[#{javascript:return "環境設定文書（この文書を編集してください）";}]]></xp:this.value></xp:viewColumn>
+	</xp:viewPanel></xp:view>

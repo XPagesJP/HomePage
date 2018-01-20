@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<!-- start header -->
+	
+	
+	<header>
+		<xp:scriptBlock id="scriptBlock1">
+			<xp:this.value><![CDATA[  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46663140-1', 'auto');
+  ga('send', 'pageview');
+]]></xp:this.value>
+		</xp:scriptBlock>
+		<div class="navbar navbar-default navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<xp:link escape="true" id="link1"
+						styleClass="navbar-brand" value="http://xpages.jp/">
+						<xp:image
+							url="#{javascript:sessionScope.logoImage}" id="image1">
+						</xp:image>
+					</xp:link>
+				</div>
+				<xc:mainManu></xc:mainManu>
+				<xp:panel style="text-align:left">
+				
+					<script async="async" defer="defer" src="https://tektek-slack.mybluemix.net/slackin.js?large"></script>
+					<br />
+					<xp:label id="label1">
+						<xp:this.value><![CDATA[テクてく Lotus 技術者 Slack に参加しよう！]]></xp:this.value>
+					</xp:label>
+				</xp:panel>
+			</div>
+		</div>
+	</header>
+	<!-- end header -->
+</xp:view>

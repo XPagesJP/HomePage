@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
+	disableTheme="true">
+
+	<xp:this.data>
+		<xp:dominoDocument var="docBlog" formName="fBlogs"
+			action="openDocument">
+		</xp:dominoDocument>
+		<xp:dominoDocument var="docConfig" formName="fHome"
+			action="openDocument" ignoreRequestParams="true">
+			<xp:this.documentId><![CDATA[#{javascript:var cView = database.getView("vConfig");
+var cDoc  = cView.getFirstDocument();
+return cDoc.getUniversalID();}]]></xp:this.documentId>
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<xp:this.pageTitle><![CDATA[#{javascript:var siteTitle = getProfileValue("site_title");
+var title = docBlog.getItemValueString("title") || "";
+return (title == "") ? siteTitle : title +" | " + siteTitle;}]]></xp:this.pageTitle>
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:var bPublic = (docBlog.getItemValueString("public") == "1" && 
+(docBlog.getItemValueString("publicType") == "1"
+ || (docBlog.getItemValueString("publicType") == "2" && docBlog.getItemValueString("publicComp") == "1")));
+
+var preview = "false";
+if(param.get("preview")!= null) preview = param.get("preview");
+if(bPublic == false && preview != "true"){
+	context.redirectToPage("error.xsp");
+}}]]></xp:this.beforePageLoad>
+
+	<xc:resources></xc:resources>
+	
+	<div id="wrapper">
+		<xc:header>
+		</xc:header>
+		<section class="sitemapSection">
+			<div class="container" style="margin-bottom:50px;">
+		<div class="title1Wrap">
+			<xp:div styleClass="title1">
+				<xp:text escape="true" tagName="h2" value="#{docBlog.title}"
+					id="h2text">
+				</xp:text>
+			</xp:div>
+		</div>
+	
+		<main role="main">
+	
+			<!--▼START contents1Wrap-->
+			<div class="contents1Wrap">
+				<div class="contents1 clearfix">
+					<div class="col-lg-8">
+						<xp:text escape="false" tagName="p" value="#{docBlog.description}"
+							id="computedField1">
+						</xp:text>
+						<xp:div styleClass="mt30">
+							<xp:fileDownload rows="30" id="fileDownload1"
+								displayLastModified="false" allowDelete="false"
+								value="#{docBlog.attachments}" displayCreated="false"
+								fileNameTitle="ファイル名" sizeTitle="サイズ"
+								hideWhen="true" displayType="false">
+							</xp:fileDownload>
+						</xp:div>
+					</div>
+					<div class="col-lg-4"></div>
+				</div>
+			</div>
+			<!--▲END contents1Wrap-->
+	
+		</main>
+		</div>
+		</section>
+		<xc:footer></xc:footer>
+	</div>
+</xp:view>

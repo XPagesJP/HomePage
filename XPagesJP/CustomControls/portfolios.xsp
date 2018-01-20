@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.data>
+		<xp:dominoDocument var="docConfig" formName="fHome"
+			action="openDocument">
+			<xp:this.documentId><![CDATA[#{javascript:var cView = database.getView( "vConfig" );
+var cDoc  = cView.getFirstDocument();
+return cDoc.getUniversalID();}]]></xp:this.documentId>
+		</xp:dominoDocument>
+		<xp:dominoView var="vPortfolios" viewName="vPortfolios"></xp:dominoView>
+	</xp:this.data>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<ul class="portfolio-categ filter">
+				<li class="all active">
+					<a href="#">全て</a>
+				</li>
+				<xp:repeat id="repeat2" rows="999" indexVar="idx" var="entryCat"
+					disableOutputTag="true">
+					<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn("","vPortfolioCat", 1));}]]></xp:this.value>
+					<xp:text id="listBox1" tagName="li" styleClass="#{javascript:entryCat}"
+						escape="false">
+						<xp:this.value><![CDATA[#{javascript:"<a href=\"#\">"+entryCat+"</a>"}]]></xp:this.value>
+					</xp:text>
+				</xp:repeat>
+			</ul>
+			<div class="clearfix">
+			</div>
+			<div class="row">
+				<section id="projects">
+					<ul id="thumbs" class="portfolio">
+						<xp:repeat id="repeat1"
+							rows="#{javascript:return compositeData.maxNum || 999;}"
+							value="#{vPortfolios}" indexVar="idx" var="entry"
+							disableOutputTag="true">
+							<xp:text tagName="li" escape="false"
+								styleClass="item-thumbs col-lg-3 design">
+								<xp:this.attrs>
+									<xp:attr name="data-id">
+										<xp:this.value><![CDATA[#{javascript:"id-"+@Text(idx)}]]></xp:this.value>
+									</xp:attr>
+									<xp:attr name="data-type">
+										<xp:this.value><![CDATA[#{javascript:entry.getColumnValues().get(5)}]]></xp:this.value>
+									</xp:attr>
+								</xp:this.attrs>
+								<xp:this.value><![CDATA[#{javascript:var imgUrl = getAttachmentImageURL(entry.getDocument(),"thumbnail");
+var retVal = '<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="&lt;a target=\'_blank\' href=\''+entry.getDocument().getItemValueString("url")+'\'&gt;'+entry.getColumnValues().get(1)+'&lt;/a&gt;" href="'+imgUrl+'">'+
+'<span class="overlay-img"></span><span class="overlay-img-thumb font-icon-plus"></span></a>';
+retVal += '<img class="" style="width:260px; height:195px;" title="" src="'+imgUrl+'" alt="'+entry.getDocument().getItemValueString("description")+'" />';
+return retVal;
+}]]></xp:this.value>
+							</xp:text>
+						</xp:repeat>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
+
+</xp:view>

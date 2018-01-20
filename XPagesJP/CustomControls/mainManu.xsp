@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<div class="navbar-collapse collapse ">
+		<ul class="nav navbar-nav">
+			<xp:repeat id="repeat1" rows="5" var="entry" indexVar="idx"
+				disableOutputTag="true">
+				<xp:this.value><![CDATA[#{javascript:var vec:java.util.Vector = new java.util.Vector();
+for(var i=1; i<=5; i++){
+	var tmp = docConfig.getItemValueArray( "menus_"+@Text(i) );
+	vec.add(tmp);
+}
+return vec;}]]></xp:this.value>
+				<xp:text escape="false" id="computedField1"
+					tagName="li">
+					<xp:this.value><![CDATA[#{javascript:var retTxt = "";
+var pos = entry[0].indexOf( "," );
+var txt = entry[0].substring( 0, pos );
+var url = entry[0].substring( pos+1, entry[0].length );
+if(entry.size()>1){
+	retTxt = "<a href=\"#\" class=\"dropdown-toggle \" data-toggle=\"dropdown\" data-hover=\"dropdown\" data-delay=\"0\" data-close-others=\"false\">"+txt+" <b class=\" icon-angle-down\"></b></a>";
+	retTxt += "<ul class=\"dropdown-menu\">";
+	for(var i=1; i<entry.size();i++){
+		var aryEntry = @Explode(entry[i], ",");
+		var externalLink = (@Contains(aryEntry[1], "http://") || @Contains(aryEntry[1], "https://")) ? "target=\"_blank\"" : "";
+		retTxt += "<li><a href=\""+aryEntry[1]+"\" "+externalLink+">"+aryEntry[0]+"</a></li>"
+	}
+	retTxt += "</ul>";
+
+}
+else{
+	retTxt = "<a href=\""+url+"\">"+txt+"</a>";
+}
+return retTxt;}]]></xp:this.value>
+					<xp:this.styleClass><![CDATA[#{javascript:var pos = entry[0].indexOf( "," );
+var url = entry[0].substring( pos+1, entry[0].length );
+if(url === "./") url = "/home.xsp";
+var cls = "";
+if(@Contains(url, view.getPageName())) cls = "active";
+if(entry.size()> 1) cls = " dropdown";
+return @Trim(cls);
+
+}]]></xp:this.styleClass>
+				</xp:text>
+			</xp:repeat>
+		</ul>
+	</div>
+
+</xp:view>

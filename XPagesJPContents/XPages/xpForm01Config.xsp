@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+  <xp:this.data>
+    <xp:dominoDocument computeWithForm="both"
+    	databaseName="xpagesjp.nsf" formName="fConfig" var="document1" />
+  </xp:this.data>
+  <xp:button id="button2" value="閉じる">
+  	
+  <xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+  	<xp:this.action>
+  		<xp:openPage name="/xpView01Config.xsp"></xp:openPage>
+  	</xp:this.action></xp:eventHandler></xp:button>
+  <xp:button value="保存して閉じる" id="button1"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+
+		<xp:actionGroup>
+			<xp:saveDocument var="document1"></xp:saveDocument>
+
+			<xp:openPage name="/xpView01Config.xsp"></xp:openPage>
+		</xp:actionGroup>
+	</xp:this.action></xp:eventHandler></xp:button>&#160;<xp:button value="保存" id="button5"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+
+		<xp:actionGroup>
+			<xp:saveDocument var="document1"></xp:saveDocument>
+
+		</xp:actionGroup>
+	</xp:this.action></xp:eventHandler></xp:button>
+  
+  <xp:button id="button3" value="削除">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh" immediate="true">
+			<xp:this.action>
+				<xp:deleteDocument name="/xpView01Config.xsp"
+					message="削除してもよろしいですか？" var="document1">
+				</xp:deleteDocument>
+			</xp:this.action></xp:eventHandler>
+	</xp:button>
+
+	<xp:button id="button4" value="キャンセル">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh" immediate="true">
+			<xp:this.action>
+				<xp:openPage name="/xpView01Config.xsp"></xp:openPage>
+			</xp:this.action></xp:eventHandler></xp:button><xp:br></xp:br>
+  <xp:table style="width:100%">
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">項目名</xp:td>
+  		<xp:td style="background-color:rgb(128,128,255)">内容</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">ロゴ、タイトル</xp:td>
+  		<xp:td style="background-color:rgb(128,128,255)"></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)"><xp:label value="サイトタイトル：" id="label1" for="menus_11">
+  			</xp:label></xp:td>
+  		<xp:td>
+  			<xp:inputText value="#{document1.site_title}"
+  				id="site_title1" style="width:100%">
+  			</xp:inputText></xp:td>
+</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)"><xp:label value="ロゴ画像：" id="label2" for="menus_11">
+  			</xp:label></xp:td>
+  		<xp:td>
+  			<xp:fileDownload rows="30" id="fileDownload1" displayLastModified="false" allowDelete="true" displayType="false" displaySize="false" hideWhen="true" value="#{document1.logoimage}"></xp:fileDownload>
+  			<xp:fileUpload id="fileUpload1" value="#{document1.logoimage}" style="width:90%">
+  				<xp:eventHandler event="onchange" submit="true"
+  					refreshMode="complete">
+  					<xp:this.action><![CDATA[#{javascript:// 更新用
+}]]></xp:this.action>
+  				</xp:eventHandler></xp:fileUpload></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)"><xp:label value="favicon：" id="label3" for="menus_11">
+  			</xp:label></xp:td>
+  		<xp:td>
+  			<xp:fileDownload rows="30" id="fileDownload2" displayLastModified="false" displaySize="false" displayType="false" allowDelete="true" hideWhen="true" value="#{document1.favicon}"></xp:fileDownload>
+  			<xp:fileUpload id="fileUpload2" style="width:90%"
+  				value="#{document1.favicon}">
+  				<xp:eventHandler event="onchange" submit="true"
+  					refreshMode="complete">
+  					<xp:this.action><![CDATA[#{javascript:// 更新用
+}]]></xp:this.action>
+  				</xp:eventHandler>
+  			</xp:fileUpload></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">メニュー</xp:td>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			（複数可。改行して入力）
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="width:10%;background-color:rgb(128,128,255)">
+  			<xp:label value="1列目：" id="menus_1_Label1"
+  				for="menus_11">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.menus_1}"
+  				id="menus_11" style="width:100%;height:100.0px">
+  				<xp:this.multipleSeparator><![CDATA[#{javascript:return "\n"}]]></xp:this.multipleSeparator>
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="2列目：" id="menus_2_Label1"
+  				for="menus_21">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.menus_2}"
+  				id="menus_21" style="width:100%;height:100px">
+  				<xp:this.multipleSeparator><![CDATA[#{javascript:return "\n"}]]></xp:this.multipleSeparator>
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="3列目：" id="menus_3_Label1"
+  				for="menus_31">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.menus_3}"
+  				id="menus_31" style="width:100%;height:100.0px">
+  				<xp:this.multipleSeparator><![CDATA[#{javascript:return "\n"}]]></xp:this.multipleSeparator>
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="4列目：" id="menus_4_Label1"
+  				for="menus_41">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.menus_4}"
+  				id="menus_41" style="width:100%;height:100.0px">
+  				<xp:this.multipleSeparator><![CDATA[#{javascript:return "\n"}]]></xp:this.multipleSeparator>
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="5列目：" id="menus_5_Label1"
+  				for="menus_51">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.menus_5}"
+  				id="menus_51" style="width:100%;height:100.0px">
+  				<xp:this.multipleSeparator><![CDATA[#{javascript:return "\n"}]]></xp:this.multipleSeparator>
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">ガジェット</xp:td>
+  		<xp:td style="background-color:rgb(128,128,255)"></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="Facebook widget:"
+  				id="facebookWidget_Label1" for="facebookWidget1">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.facebookWidget}"
+  				id="facebookWidget1" style="height:100px;width:100%">
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="Facebook account:"
+  				id="facebookAccount_Label1" for="facebookAccount1">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.facebookAccount}"
+  				id="facebookAccount1" style="width:100%">
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="Twitter widget:"
+  				id="twitterWidget_Label1" for="twitterWidget1">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.twitterWidget}"
+  				id="twitterWidget1" style="height:100px;width:100%">
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="Twitter account:"
+  				id="twitterAccount_Label1" for="twitterAccount1">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.twitterAccount}"
+  				id="twitterAccount1" style="width:100%">
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(255,128,64)">フッター<xp:br></xp:br><xp:span style="font-weight:bold">（現在機能停止中）</xp:span></xp:td>
+  		<xp:td style="background-color:rgb(255,128,64);font-weight:bold"></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(255,128,64)">
+  			<xp:label value="1列目　問い合わせ先：" id="contact_us_Label1"
+  				for="contact_us1">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.contact_us}"
+  				id="contact_us1" style="width:100%">
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(255,128,64)">
+  			<xp:label value="1列目 TEL：" id="contact_phone_Label1"
+  				for="contact_phone1">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.contact_phone}"
+  				id="contact_phone1" style="width:100%">
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(255,128,64)">
+  			<xp:label value="1列目 email：" id="contact_email_Label1"
+  				for="contact_email1">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.contact_email}"
+  				id="contact_email1" style="width:100%">
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(255,128,64)">
+  			<xp:label value="2列目 リンク：" id="footer_page_list_Label1"
+  				for="footer_page_list1">
+  			</xp:label>
+  			<xp:br></xp:br>（複数可。改行して入力）</xp:td>
+  		<xp:td>
+  			<xp:inputTextarea value="#{document1.footer_page_list}"
+  				id="footer_page_list1" style="height:100px;width:100%">
+  				<xp:this.multipleSeparator><![CDATA[#{javascript:return "\n"}]]></xp:this.multipleSeparator>
+  			</xp:inputTextarea>
+  		</xp:td>
+  	</xp:tr>
+  </xp:table></xp:view>

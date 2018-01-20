@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:metaData name="viewport" content="width=device-width, initial-scale=1.0">
+		</xp:metaData>
+	</xp:this.resources>
+	<xc:resources></xc:resources>
+	<div id="wrapper">
+		<!-- start header -->
+		<header>
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="index.html">
+							<span>N</span>
+							otesConsortium
+						</a>
+					</div>
+					<div class="navbar-collapse collapse ">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="index.html">Home</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle " data-toggle="dropdown"
+									data-hover="dropdown" data-delay="0" data-close-others="false">
+									<xp:label value="コミュニティサイト" id="label1" />
+									<b class=" icon-angle-down"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="http://qa.xpages.jp/">
+											qA9 for ICS
+										</a>
+									</li>
+									<li>
+										<a href="http://www.facebook.com/extlibj">
+											Extension Library Japan Project
+										</a>
+									</li>
+									<li>
+										<a
+											href="http://www.ibm.com/developerworks/jp/offers/events/techtech01/">
+											テクてくロータス技術者夜会
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="portfolio.html">最新情報</a>
+							</li>
+							<li>
+								<a href="blog.html">会員メニュー</a>
+							</li>
+							<li>
+								<a href="contact.html">お問い合わせ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- end header -->
+		<section id="featured">
+			<!-- start slider -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- Slider -->
+						<div id="main-slider" class="flexslider">
+							<ul class="slides">
+								<li>
+									<img src="img/slides/1.jpg" alt="" />
+									<div class="flex-caption">
+										<h3>Modern Design</h3>
+										<p>
+											Duis fermentum auctor ligula
+											ac malesuada. Mauris et
+											metus
+											odio, in pulvinar urna
+										</p>
+										<a href="#" class="btn btn-theme">
+											Learn More
+										</a>
+									</div>
+								</li>
+								<li>
+									<img src="img/slides/2.jpg" alt="" />
+									<div class="flex-caption">
+										<h3>Fully Responsive</h3>
+										<p>
+											Sodales neque vitae justo
+											sollicitudin aliquet sit
+											amet diam
+											curabitur sed
+											fermentum.
+										</p>
+										<a href="#" class="btn btn-theme">
+											Learn More
+										</a>
+									</div>
+								</li>
+								<li>
+									<img src="img/slides/3.jpg" alt="" />
+									<div class="flex-caption">
+										<h3>Clean and Fast</h3>
+										<p>
+											Lorem ipsum dolor sit amet,
+											consectetur adipiscing elit
+											donec mer lacinia.
+										</p>
+										<a href="#" class="btn btn-theme">
+											Learn More
+										</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- end slider -->
+					</div>
+				</div>
+			</div>
+
+
+
+		</section>
+		<section class="callaction">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="big-cta">
+							<div class="cta-text">
+								<h2>
+									<span>情報共有から生まれる想像力</span>
+									<br />
+									私たちは IBM ICS/ESS 製品のユーザーコミュニティです
+								</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="row">
+							<div class="col-lg-3">
+								<div class="box">
+									<div class="box-gray aligncenter">
+										<h4>Fully responsive</h4>
+										<div class="icon">
+											<i class="fa fa-desktop fa-3x">
+											</i>
+										</div>
+										<p>
+											Voluptatem accusantium
+											doloremque laudantium sprea
+											totam rem
+											aperiam.
+										</p>
+
+									</div>
+									<div class="box-bottom">
+										<a href="#">Learn more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="box">
+									<div class="box-gray aligncenter">
+										<h4>Modern Style</h4>
+										<div class="icon">
+											<i class="fa fa-pagelines fa-3x">
+											</i>
+										</div>
+										<p>
+											Voluptatem accusantium
+											doloremque laudantium sprea
+											totam rem
+											aperiam.
+										</p>
+
+									</div>
+									<div class="box-bottom">
+										<a href="#">Learn more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="box">
+									<div class="box-gray aligncenter">
+										<h4>Customizable</h4>
+										<div class="icon">
+											<i class="fa fa-edit fa-3x">
+											</i>
+										</div>
+										<p>
+											Voluptatem accusantium
+											doloremque laudantium sprea
+											totam rem
+											aperiam.
+										</p>
+
+									</div>
+									<div class="box-bottom">
+										<a href="#">Learn more</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3">
+								<div class="box">
+									<div class="box-gray aligncenter">
+										<h4>Valid HTML5</h4>
+										<div class="icon">
+											<i class="fa fa-code fa-3x">
+											</i>
+										</div>
+										<p>
+											Voluptatem accusantium
+											doloremque laudantium sprea
+											totam rem
+											aperiam.
+										</p>
+
+									</div>
+									<div class="box-bottom">
+										<a href="#">Learn more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- divider -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline"></div>
+					</div>
+				</div>
+				<!-- end divider -->
+				<!-- Portfolio Projects -->
+				<div class="row">
+					<div class="col-lg-12">
+						<h4 class="heading">私たちはノーツコンソーシアムの活動を応援します</h4>
+						<div class="row">
+							<section id="projects">
+								<ul id="thumbs" class="portfolio">
+									<!-- Item Project and Filter Name -->
+									<li class="col-lg-3 design" data-id="id-0" data-type="web">
+										<div class="item-thumbs">
+											<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+											<a class="hover-wrap fancybox" data-fancybox-group="gallery"
+												title="OnTime Group" href="img/works/1.jpg">
+												<span class="overlay-img"></span>
+												<span class="overlay-img-thumb font-icon-plus"></span>
+											</a>
+											<!-- Thumb Image and Description -->
+											<img src="img/works/1.jpg"
+												alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.">
+											</img>
+										</div>
+										<a href="http://jp.teamstudio.com">Teamstudio Japan K.K.</a>
+									</li>
+									<!-- End Item Project -->
+									<!-- Item Project and Filter Name -->
+									<li class="item-thumbs col-lg-3 design" data-id="id-1"
+										data-type="icon">
+										<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+										<a class="hover-wrap fancybox" data-fancybox-group="gallery"
+											title="Work 2" href="img/works/2.jpg">
+											<span class="overlay-img"></span>
+											<span class="overlay-img-thumb font-icon-plus">
+											</span>
+										</a>
+										<!-- Thumb Image and Description -->
+										<img src="img/works/2.jpg"
+											alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis." />
+									</li>
+									<!-- End Item Project -->
+									<!-- Item Project and Filter Name -->
+									<li class="item-thumbs col-lg-3 photography" data-id="id-2"
+										data-type="illustrator">
+										<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+										<a class="hover-wrap fancybox" data-fancybox-group="gallery"
+											title="Work 3" href="img/works/3.jpg">
+											<span class="overlay-img"></span>
+											<span class="overlay-img-thumb font-icon-plus">
+											</span>
+										</a>
+										<!-- Thumb Image and Description -->
+										<img src="img/works/3.jpg"
+											alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis." />
+									</li>
+									<!-- End Item Project -->
+									<!-- Item Project and Filter Name -->
+									<li class="item-thumbs col-lg-3 photography" data-id="id-2"
+										data-type="illustrator">
+										<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+										<a class="hover-wrap fancybox" data-fancybox-group="gallery"
+											title="Work 4" href="img/works/4.jpg">
+											<span class="overlay-img"></span>
+											<span class="overlay-img-thumb font-icon-plus">
+											</span>
+										</a>
+										<!-- Thumb Image and Description -->
+										<img src="img/works/4.jpg"
+											alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis." />
+									</li>
+									<!-- End Item Project -->
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+				<!-- divider -->
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="solidline"></div>
+					</div>
+				</div>
+				<!-- end divider -->
+				<!-- Social widget embedding -->
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="widget">
+							<h5 class="widgetheading">Facebook</h5>
+							<div class="fb-page" data-href="https://www.facebook.com/notescons"
+								data-hide-cover="false" data-show-facepile="true"
+								data-show-posts="true">
+								<div class="fb-xfbml-parse-ignore">
+									<blockquote cite="https://www.facebook.com/notescons">
+										<a href="https://www.facebook.com/notescons">ノーツコンソーシアム</a>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="widget">
+							<h5 class="widgetheading">Twitter</h5>
+							<a class="twitter-timeline" href="https://twitter.com/notescons"
+								data-widget-id="602704118705049600">@notesconsさんのツイート</a>
+							<script>!function(d,s,id){var
+								js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+							</script>
+						</div>
+					</div>
+				</div>
+				<!-- end of Social widget -->
+
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">
+								Get in touch with us
+							</h5>
+							<address>
+								<strong>Moderna company Inc</strong>
+								<br />
+								Modernbuilding suite V124, AB 01
+								<br />
+								Someplace 16425 Earth
+							</address>
+							<p>
+								<i class="icon-phone"></i>
+								(123) 456-7890 - (123) 555-7891
+								<br />
+								<i class="icon-envelope-alt"></i>
+								email@domainname.com
+							</p>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Pages</h5>
+							<ul class="link-list">
+								<li>
+									<a href="#">Press release</a>
+								</li>
+								<li>
+									<a href="#">Terms and conditions</a>
+								</li>
+								<li>
+									<a href="#">Privacy policy</a>
+								</li>
+								<li>
+									<a href="#">Career center</a>
+								</li>
+								<li>
+									<a href="#">Contact us</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">Latest posts</h5>
+							<ul class="link-list">
+								<li>
+									<a href="#">
+										Lorem ipsum dolor sit amet,
+										consectetur adipiscing
+										elit.
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Pellentesque et pulvinar enim.
+										Quisque at tempor
+										ligula
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										Natus error sit voluptatem
+										accusantium doloremque
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="widget">
+							<h5 class="widgetheading">
+								Flickr photostream
+							</h5>
+							<div class="flickr_badge">
+								<script type="text/javascript"
+									src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03">
+								</script>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sub-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="copyright">
+								<p>
+									<span>
+										Copyright NotesConsortium.,LTD All Rights Reserved
+									</span>
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<ul class="social-network">
+								<li>
+									<a href="http://www.facebook.com/notescons" data-placement="top"
+										title="Facebook">
+										<i class="fa fa-facebook"></i>
+									</a>
+								</li>
+								<li>
+									<a href="http://twitter.com/notescons" data-placement="top"
+										title="Twitter">
+										<i class="fa fa-twitter"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<a href="#" class="scrollup">
+		<i class="fa fa-angle-up active"></i>
+	</a>
+	<xp:scriptBlock id="scriptBlock1">
+		<xp:this.value><![CDATA[(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));]]></xp:this.value>
+	</xp:scriptBlock>
+</xp:view>

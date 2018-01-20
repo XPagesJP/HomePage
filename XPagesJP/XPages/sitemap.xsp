@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	pageIcon="#{javascript:sessionScope.favicon;}">
+
+	<xp:this.data>
+		<xp:dominoDocument var="docConfig" formName="fHome"
+			action="openDocument">
+			<xp:this.documentId><![CDATA[#{javascript:var cView = database.getView( "vConfig" );
+var cDoc  = cView.getFirstDocument();
+return cDoc.getUniversalID();}]]></xp:this.documentId>
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<xp:this.resources>
+		<xp:styleSheet href="css/sitemap.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:resources></xc:resources>
+
+	<div id="wrapper">
+		<xc:header></xc:header>
+		<section class="sitemapSection">
+			<div class="container" style="margin-bottom:50px;">
+				<div class="sitemapContainer tree">
+					<xp:repeat id="repeat1" rows="5" var="menu" disableOutputTag="true">
+						<xp:this.value><![CDATA[#{javascript:var menuList = [];
+for(var i=1; i<=5; i++){
+	menuList.push(docConfig.getItemValueArray("menus_" + i));
+}
+return menuList;}]]></xp:this.value>
+						<xp:text escape="false" id="computedField1"
+							tagName="div" styleClass="sitemapCategory">
+							<xp:this.value><![CDATA[#{javascript:var html = [];
+var topMenu = menu[0].split(",");
+html.push("<div class='sitemapItem top'");
+if(topMenu[1] && topMenu[1].trim()){
+	html.push(" data-url='", topMenu[1].trim(), "'");
+}
+html.push(">");
+html.push("<span>", topMenu[0].trim(), "</a>");
+html.push("</div>");
+for(var i=1; i<menu.length; i++){
+	var childMenu = menu[i].split(",");
+	html.push("<div class='sitemapItem child1'");
+	if(childMenu[1] && childMenu[1].trim()){
+		html.push(" data-url='", childMenu[1].trim(), "'");
+	}
+	html.push(">");
+	html.push("<span>", childMenu[0].trim(), "</a>");
+	html.push("</div>");
+}
+return html.join("");
+}]]></xp:this.value>
+						</xp:text>
+					</xp:repeat>
+				</div>
+			</div>
+		</section>
+		<xc:footer></xc:footer>
+		<xp:scriptBlock id="scriptBlock1" src="/sitemap.js"
+			type="text/javascript">
+		</xp:scriptBlock>
+	</div>
+</xp:view>

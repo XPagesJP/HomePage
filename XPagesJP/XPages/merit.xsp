@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	pageIcon="#{javascript:sessionScope.favicon;}">
+
+	<xp:this.data>
+		<xp:dominoDocument var="docConfig" formName="fHome"
+			action="openDocument">
+			<xp:this.documentId><![CDATA[#{javascript:var cView = database.getView( "vConfig" );
+var cDoc  = cView.getFirstDocument();
+return cDoc.getUniversalID();}]]></xp:this.documentId>
+		</xp:dominoDocument>
+	</xp:this.data>
+
+	<xc:resources></xc:resources>
+
+	<div id="wrapper">
+		<xc:header></xc:header>
+
+		<section id="inner-headline">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<ul class="breadcrumb">
+							<li>
+								<a href="./">
+									<i class="fa fa-home"></i>
+								</a>
+								<i class="icon-angle-right"></i>
+							</li>
+							<li class="active">導入のメリット</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="content">
+			<div class="container">
+			TBD
+			</div>
+		</section>
+		<!-- footer Start -->
+		<xc:footer></xc:footer>
+		<!-- footer end -->
+	</div>
+	<a href="#" class="scrollup">
+		<i class="fa fa-angle-up active"></i>
+	</a>
+</xp:view>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.resources>
+		<xp:script src="/xCustomLib.jss" clientSide="false"></xp:script>
+		
+		<!-- Stylesheets-->
+		<xp:styleSheet href="css/bootstrap.min.css" />
+		<xp:styleSheet href="css/fancybox/jquery.fancybox.css" />
+		<!--<xp:styleSheet href="css/jcarousel.css" /> -->
+		<xp:styleSheet href="css/flexslider.css" />
+		<xp:styleSheet href="css/style.css" />
+		<xp:styleSheet href="skins/default.css" />
+		
+		<!-- Client side JavaScript Library -->
+		<xp:script src="js/jquery.js" clientSide="true" />
+		<xp:script src="js/jquery.easing.1.3.js" clientSide="true" />
+		<xp:script src="js/bootstrap.min.js" clientSide="true" />
+		<xp:script src="js/jquery.fancybox.pack.js" clientSide="true" />
+		<xp:script src="js/jquery.fancybox-media.js" clientSide="true" />
+		<xp:script src="js/google-code-prettify/prettify.js" clientSide="true" />
+		<xp:script src="js/portfolio/jquery.quicksand.js" clientSide="true" />
+		<xp:script src="js/portfolio/setting.js" clientSide="true" />
+		<xp:script src="js/jquery.flexslider.js" clientSide="true" />
+		<xp:script src="js/animate.js" clientSide="true" />
+		<xp:script src="js/custom.js" clientSide="true" />
+		<xp:metaData name="viewport"
+			content="width=device-width, initial-scale=1.0">
+		</xp:metaData>
+		
+	</xp:this.resources>
+	<xp:this.beforePageLoad><![CDATA[#{javascript:init();}]]></xp:this.beforePageLoad>
+</xp:view>

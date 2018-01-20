@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"><xp:this.data>
+    <xp:dominoDocument computeWithForm="both"
+    	databaseName="xpagesjp.nsf" formName="fPortfolio"
+    	var="document1" />
+</xp:this.data>
+	<xp:button id="button1" value="閉じる"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/xpView04Portfolios.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:button value="保存して閉じる" id="button5"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+
+		<xp:actionGroup>
+			<xp:saveDocument var="document1"></xp:saveDocument>
+
+
+
+
+
+
+			<xp:openPage name="/xpView04Portfolios.xsp"></xp:openPage>
+		</xp:actionGroup>
+	</xp:this.action></xp:eventHandler></xp:button>&#160;<xp:button id="button2" value="保存"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:saveDocument var="document1"></xp:saveDocument>
+	</xp:this.action></xp:eventHandler></xp:button>
+	
+	<xp:button id="button3" value="削除">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh" immediate="true">
+			<xp:this.action>
+				<xp:deleteDocument name="/xpView04Portfolios.xsp"
+					message="削除してもよろしいですか？" var="document1">
+				</xp:deleteDocument>
+			</xp:this.action></xp:eventHandler>
+	</xp:button>
+
+	<xp:button id="button4" value="キャンセル">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh" immediate="true">
+			<xp:this.action>
+				<xp:openPage name="/xpView04Portfolios.xsp"></xp:openPage>
+			</xp:this.action></xp:eventHandler></xp:button><xp:br></xp:br>
+	<xp:table style="width:100%">
+		<xp:tr>
+			<xp:td
+				style="width:100px;background-color:rgb(128,128,255)">
+				<xp:label value="表示順序：" id="num_Label1" for="num1"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.num}" id="num1"
+					style="width:100px" required="true">
+					<xp:this.converter>
+						<xp:convertNumber type="number"></xp:convertNumber>
+					</xp:this.converter>
+					<xp:this.validators>
+						<xp:validateRequired message="表示順序は必須入力です。"></xp:validateRequired>
+					</xp:this.validators>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label id="title_Label1" for="title1"
+					value="タイトル：">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.title}" id="title1"
+					style="width:100%" required="true">
+					<xp:this.validators>
+						<xp:validateRequired message="タイトルは必須入力です。"></xp:validateRequired>
+					</xp:this.validators>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label value="説明：" id="label1" for="description1">
+				</xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputTextarea id="description1"
+					style="width:100%;height:100px" value="#{document1.description}">
+				</xp:inputTextarea></xp:td>
+</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label value="カテゴリ：" id="label2" for="img1"></xp:label>
+			</xp:td>
+			<xp:td>
+
+
+
+			<xp:inputTextarea value="#{document1.category}"
+				id="category1" style="width:100%;height:100px">
+				<xp:this.multipleSeparator><![CDATA[#{javascript:return "\n"}]]></xp:this.multipleSeparator>
+			</xp:inputTextarea></xp:td>
+</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(255,128,64)">
+				<xp:label value="ボタンのラベル：" id="label3"
+					for="description1">
+				</xp:label>
+				<xp:br></xp:br><xp:span style="font-weight:bold">（未使用）</xp:span></xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.btnLabel}"
+					id="btnLabel1" style="width:100%">
+					
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label value="URL：" id="url_Label1" for="url1"></xp:label>
+			</xp:td>
+			<xp:td>
+				<xp:inputText value="#{document1.url}" id="url1"
+					style="width:100%" required="true">
+					<xp:this.validators>
+						<xp:validateRequired message="URL は必須入力です。"></xp:validateRequired>
+					</xp:this.validators>
+				</xp:inputText>
+			</xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(255,128,64)">
+
+				<xp:label value="アイコン：" id="description_Label1"
+					for="description1">
+				</xp:label><xp:br></xp:br><xp:span style="font-weight:bold">（未使用）
+			</xp:span></xp:td>
+			<xp:td><xp:comboBox value="#{document1.icon_name}" id="icon_name1" style="width:200px">
+		<xp:selectItem itemLabel="adjust"></xp:selectItem>
+		<xp:selectItem itemLabel="anchor"></xp:selectItem>
+		<xp:selectItem itemLabel="archive"></xp:selectItem>
+		<xp:selectItem itemLabel="area-chart"></xp:selectItem>
+		<xp:selectItem itemLabel="arrows"></xp:selectItem>
+		<xp:selectItem itemLabel="arrows-h"></xp:selectItem>
+		<xp:selectItem itemLabel="arrows-v"></xp:selectItem>
+		<xp:selectItem itemLabel="asterisk"></xp:selectItem>
+		<xp:selectItem itemLabel="at"></xp:selectItem>
+		<xp:selectItem itemLabel="ban"></xp:selectItem>
+		<xp:selectItem itemLabel="bar-chart"></xp:selectItem>
+		<xp:selectItem itemLabel="barcode"></xp:selectItem>
+		<xp:selectItem itemLabel="bars"></xp:selectItem>
+		<xp:selectItem itemLabel="bed"></xp:selectItem>
+		<xp:selectItem itemLabel="beer"></xp:selectItem>
+		<xp:selectItem itemLabel="bell"></xp:selectItem>
+		<xp:selectItem itemLabel="bell-o"></xp:selectItem>
+		<xp:selectItem itemLabel="bell-slash"></xp:selectItem>
+		<xp:selectItem itemLabel="bell-slash-o"></xp:selectItem>
+		<xp:selectItem itemLabel="bicycle"></xp:selectItem>
+		<xp:selectItem itemLabel="binoculars"></xp:selectItem>
+		<xp:selectItem itemLabel="birthday-cake"></xp:selectItem>
+		<xp:selectItem itemLabel="bolt"></xp:selectItem>
+		<xp:selectItem itemLabel="bomb"></xp:selectItem>
+		<xp:selectItem itemLabel="book"></xp:selectItem>
+		<xp:selectItem itemLabel="bookmark"></xp:selectItem>
+		<xp:selectItem itemLabel="bookmark-o"></xp:selectItem>
+		<xp:selectItem itemLabel="briefcase"></xp:selectItem>
+		<xp:selectItem itemLabel="bug"></xp:selectItem>
+		<xp:selectItem itemLabel="building"></xp:selectItem>
+		<xp:selectItem itemLabel="building-o"></xp:selectItem>
+		<xp:selectItem itemLabel="bullhorn"></xp:selectItem>
+		<xp:selectItem itemLabel="bullseye"></xp:selectItem>
+		<xp:selectItem itemLabel="bus"></xp:selectItem>
+		<xp:selectItem itemLabel="calculator"></xp:selectItem>
+		<xp:selectItem itemLabel="calendar"></xp:selectItem>
+		<xp:selectItem itemLabel="calendar-o"></xp:selectItem>
+		<xp:selectItem itemLabel="camera"></xp:selectItem>
+		<xp:selectItem itemLabel="camera-retro"></xp:selectItem>
+		<xp:selectItem itemLabel="car"></xp:selectItem>
+		<xp:selectItem itemLabel="caret-square-o-down"></xp:selectItem>
+		<xp:selectItem itemLabel="caret-square-o-left"></xp:selectItem>
+		<xp:selectItem itemLabel="caret-square-o-right"></xp:selectItem>
+		<xp:selectItem itemLabel="caret-square-o-up"></xp:selectItem>
+		<xp:selectItem itemLabel="cart-arrow-down"></xp:selectItem>
+		<xp:selectItem itemLabel="cart-plus"></xp:selectItem>
+		<xp:selectItem itemLabel="cc"></xp:selectItem>
+		<xp:selectItem itemLabel="certificate"></xp:selectItem>
+		<xp:selectItem itemLabel="check"></xp:selectItem>
+		<xp:selectItem itemLabel="check-circle"></xp:selectItem>
+		<xp:selectItem itemLabel="check-circle-o"></xp:selectItem>
+		<xp:selectItem itemLabel="check-square"></xp:selectItem>
+		<xp:selectItem itemLabel="check-square-o"></xp:selectItem>
+		<xp:selectItem itemLabel="child"></xp:selectItem>
+		<xp:selectItem itemLabel="circle"></xp:selectItem>
+		<xp:selectItem itemLabel="circle-o"></xp:selectItem>
+		<xp:selectItem itemLabel="circle-o-notch"></xp:selectItem>
+		<xp:selectItem itemLabel="circle-thin"></xp:selectItem>
+		<xp:selectItem itemLabel="clock-o"></xp:selectItem>
+		<xp:selectItem itemLabel="cloud"></xp:selectItem>
+		<xp:selectItem itemLabel="cloud-download"></xp:selectItem>
+		<xp:selectItem itemLabel="cloud-upload"></xp:selectItem>
+		<xp:selectItem itemLabel="code"></xp:selectItem>
+		<xp:selectItem itemLabel="code-fork"></xp:selectItem>
+		<xp:selectItem itemLabel="coffee"></xp:selectItem>
+		<xp:selectItem itemLabel="cog"></xp:selectItem>
+		<xp:selectItem itemLabel="cogs"></xp:selectItem>
+		<xp:selectItem itemLabel="comment"></xp:selectItem>
+		<xp:selectItem itemLabel="comment-o"></xp:selectItem>
+		<xp:selectItem itemLabel="comments"></xp:selectItem>
+		<xp:selectItem itemLabel="comments-o"></xp:selectItem>
+		<xp:selectItem itemLabel="compass"></xp:selectItem>
+		<xp:selectItem itemLabel="copyright"></xp:selectItem>
+		<xp:selectItem itemLabel="credit-card"></xp:selectItem>
+		<xp:selectItem itemLabel="crop"></xp:selectItem>
+		<xp:selectItem itemLabel="crosshairs"></xp:selectItem>
+		<xp:selectItem itemLabel="cube"></xp:selectItem>
+		<xp:selectItem itemLabel="cubes"></xp:selectItem>
+		<xp:selectItem itemLabel="cutlery"></xp:selectItem>
+		<xp:selectItem itemLabel="database"></xp:selectItem>
+		<xp:selectItem itemLabel="desktop"></xp:selectItem>
+		<xp:selectItem itemLabel="diamond"></xp:selectItem>
+		<xp:selectItem itemLabel="dot-circle-o"></xp:selectItem>
+		<xp:selectItem itemLabel="download"></xp:selectItem>
+		<xp:selectItem itemLabel="ellipsis-h"></xp:selectItem>
+		<xp:selectItem itemLabel="ellipsis-v"></xp:selectItem>
+		<xp:selectItem itemLabel="envelope"></xp:selectItem>
+		<xp:selectItem itemLabel="envelope-o"></xp:selectItem>
+		<xp:selectItem itemLabel="envelope-square"></xp:selectItem>
+		<xp:selectItem itemLabel="eraser"></xp:selectItem>
+		<xp:selectItem itemLabel="exchange"></xp:selectItem>
+		<xp:selectItem itemLabel="exclamation"></xp:selectItem>
+		<xp:selectItem itemLabel="exclamation-circle"></xp:selectItem>
+		<xp:selectItem itemLabel="exclamation-triangle"></xp:selectItem>
+		<xp:selectItem itemLabel="external-link"></xp:selectItem>
+		<xp:selectItem itemLabel="external-link-square"></xp:selectItem>
+		<xp:selectItem itemLabel="eye"></xp:selectItem>
+		<xp:selectItem itemLabel="eyedropper"></xp:selectItem>
+		<xp:selectItem itemLabel="eye-slash"></xp:selectItem>
+		<xp:selectItem itemLabel="fax"></xp:selectItem>
+		<xp:selectItem itemLabel="female"></xp:selectItem>
+		<xp:selectItem itemLabel="fighter-jet"></xp:selectItem>
+		<xp:selectItem itemLabel="file-archive-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-audio-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-code-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-excel-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-image-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-pdf-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-powerpoint-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-video-o"></xp:selectItem>
+		<xp:selectItem itemLabel="file-word-o"></xp:selectItem>
+		<xp:selectItem itemLabel="film"></xp:selectItem>
+		<xp:selectItem itemLabel="filter"></xp:selectItem>
+		<xp:selectItem itemLabel="fire"></xp:selectItem>
+		<xp:selectItem itemLabel="fire-extinguisher"></xp:selectItem>
+		<xp:selectItem itemLabel="flag"></xp:selectItem>
+		<xp:selectItem itemLabel="flag-checkered"></xp:selectItem>
+		<xp:selectItem itemLabel="flag-o"></xp:selectItem>
+		<xp:selectItem itemLabel="flask"></xp:selectItem>
+		<xp:selectItem itemLabel="folder"></xp:selectItem>
+		<xp:selectItem itemLabel="folder-o"></xp:selectItem>
+		<xp:selectItem itemLabel="folder-open"></xp:selectItem>
+		<xp:selectItem itemLabel="folder-open-o"></xp:selectItem>
+		<xp:selectItem itemLabel="frown-o"></xp:selectItem>
+		<xp:selectItem itemLabel="futbol-o"></xp:selectItem>
+		<xp:selectItem itemLabel="gamepad"></xp:selectItem>
+		<xp:selectItem itemLabel="gavel"></xp:selectItem>
+		<xp:selectItem itemLabel="gift"></xp:selectItem>
+		<xp:selectItem itemLabel="glass"></xp:selectItem>
+		<xp:selectItem itemLabel="globe"></xp:selectItem>
+		<xp:selectItem itemLabel="graduation-cap"></xp:selectItem>
+		<xp:selectItem itemLabel="hdd-o"></xp:selectItem>
+		<xp:selectItem itemLabel="headphones"></xp:selectItem>
+		<xp:selectItem itemLabel="heart"></xp:selectItem>
+		<xp:selectItem itemLabel="heartbeat"></xp:selectItem>
+		<xp:selectItem itemLabel="heart-o"></xp:selectItem>
+		<xp:selectItem itemLabel="history"></xp:selectItem>
+		<xp:selectItem itemLabel="home"></xp:selectItem>
+		<xp:selectItem itemLabel="inbox"></xp:selectItem>
+		<xp:selectItem itemLabel="info"></xp:selectItem>
+		<xp:selectItem itemLabel="info-circle"></xp:selectItem>
+		<xp:selectItem itemLabel="key"></xp:selectItem>
+		<xp:selectItem itemLabel="keyboard-o"></xp:selectItem>
+		<xp:selectItem itemLabel="language"></xp:selectItem>
+		<xp:selectItem itemLabel="laptop"></xp:selectItem>
+		<xp:selectItem itemLabel="leaf"></xp:selectItem>
+		<xp:selectItem itemLabel="lemon-o"></xp:selectItem>
+		<xp:selectItem itemLabel="level-down"></xp:selectItem>
+		<xp:selectItem itemLabel="level-up"></xp:selectItem>
+		<xp:selectItem itemLabel="life-ring"></xp:selectItem>
+		<xp:selectItem itemLabel="lightbulb-o"></xp:selectItem>
+		<xp:selectItem itemLabel="line-chart"></xp:selectItem>
+		<xp:selectItem itemLabel="location-arrow"></xp:selectItem>
+		<xp:selectItem itemLabel="lock"></xp:selectItem>
+		<xp:selectItem itemLabel="magic"></xp:selectItem>
+		<xp:selectItem itemLabel="magnet"></xp:selectItem>
+		<xp:selectItem itemLabel="male"></xp:selectItem>
+		<xp:selectItem itemLabel="map-marker"></xp:selectItem>
+		<xp:selectItem itemLabel="meh-o"></xp:selectItem>
+		<xp:selectItem itemLabel="microphone"></xp:selectItem>
+		<xp:selectItem itemLabel="microphone-slash"></xp:selectItem>
+		<xp:selectItem itemLabel="minus"></xp:selectItem>
+		<xp:selectItem itemLabel="minus-circle"></xp:selectItem>
+		<xp:selectItem itemLabel="minus-square"></xp:selectItem>
+		<xp:selectItem itemLabel="minus-square-o"></xp:selectItem>
+		<xp:selectItem itemLabel="mobile"></xp:selectItem>
+		<xp:selectItem itemLabel="money"></xp:selectItem>
+		<xp:selectItem itemLabel="moon-o"></xp:selectItem>
+		<xp:selectItem itemLabel="motorcycle"></xp:selectItem>
+		<xp:selectItem itemLabel="music"></xp:selectItem>
+		<xp:selectItem itemLabel="newspaper-o"></xp:selectItem>
+		<xp:selectItem itemLabel="paint-brush"></xp:selectItem>
+		<xp:selectItem itemLabel="paper-plane"></xp:selectItem>
+		<xp:selectItem itemLabel="paper-plane-o"></xp:selectItem>
+		<xp:selectItem itemLabel="paw"></xp:selectItem>
+		<xp:selectItem itemLabel="pencil"></xp:selectItem>
+		<xp:selectItem itemLabel="pencil-square"></xp:selectItem>
+		<xp:selectItem itemLabel="pencil-square-o"></xp:selectItem>
+		<xp:selectItem itemLabel="phone"></xp:selectItem>
+		<xp:selectItem itemLabel="phone-square"></xp:selectItem>
+		<xp:selectItem itemLabel="picture-o"></xp:selectItem>
+		<xp:selectItem itemLabel="pie-chart"></xp:selectItem>
+		<xp:selectItem itemLabel="plane"></xp:selectItem>
+		<xp:selectItem itemLabel="plug"></xp:selectItem>
+		<xp:selectItem itemLabel="plus"></xp:selectItem>
+		<xp:selectItem itemLabel="plus-circle"></xp:selectItem>
+		<xp:selectItem itemLabel="plus-square"></xp:selectItem>
+		<xp:selectItem itemLabel="plus-square-o"></xp:selectItem>
+		<xp:selectItem itemLabel="power-off"></xp:selectItem>
+		<xp:selectItem itemLabel="print"></xp:selectItem>
+		<xp:selectItem itemLabel="puzzle-piece"></xp:selectItem>
+		<xp:selectItem itemLabel="qrcode"></xp:selectItem>
+		<xp:selectItem itemLabel="question"></xp:selectItem>
+		<xp:selectItem itemLabel="question-circle"></xp:selectItem>
+		<xp:selectItem itemLabel="quote-left"></xp:selectItem>
+		<xp:selectItem itemLabel="quote-right"></xp:selectItem>
+		<xp:selectItem itemLabel="random"></xp:selectItem>
+		<xp:selectItem itemLabel="recycle"></xp:selectItem>
+		<xp:selectItem itemLabel="refresh"></xp:selectItem>
+		<xp:selectItem itemLabel="reply"></xp:selectItem>
+		<xp:selectItem itemLabel="reply-all"></xp:selectItem>
+		<xp:selectItem itemLabel="retweet"></xp:selectItem>
+		<xp:selectItem itemLabel="road"></xp:selectItem>
+		<xp:selectItem itemLabel="rocket"></xp:selectItem>
+		<xp:selectItem itemLabel="rss"></xp:selectItem>
+		<xp:selectItem itemLabel="rss-square"></xp:selectItem>
+		<xp:selectItem itemLabel="search"></xp:selectItem>
+		<xp:selectItem itemLabel="search-minus"></xp:selectItem>
+		<xp:selectItem itemLabel="search-plus"></xp:selectItem>
+		<xp:selectItem itemLabel="server"></xp:selectItem>
+		<xp:selectItem itemLabel="share"></xp:selectItem>
+		<xp:selectItem itemLabel="share-alt"></xp:selectItem>
+		<xp:selectItem itemLabel="share-alt-square"></xp:selectItem>
+		<xp:selectItem itemLabel="share-square"></xp:selectItem>
+		<xp:selectItem itemLabel="share-square-o"></xp:selectItem>
+		<xp:selectItem itemLabel="shield"></xp:selectItem>
+		<xp:selectItem itemLabel="ship"></xp:selectItem>
+		<xp:selectItem itemLabel="shopping-cart"></xp:selectItem>
+		<xp:selectItem itemLabel="signal"></xp:selectItem>
+		<xp:selectItem itemLabel="sign-in"></xp:selectItem>
+		<xp:selectItem itemLabel="sign-out"></xp:selectItem>
+		<xp:selectItem itemLabel="sitemap"></xp:selectItem>
+		<xp:selectItem itemLabel="sliders"></xp:selectItem>
+		<xp:selectItem itemLabel="smile-o"></xp:selectItem>
+		<xp:selectItem itemLabel="sort"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-alpha-asc"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-alpha-desc"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-amount-asc"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-amount-desc"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-asc"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-desc"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-numeric-asc"></xp:selectItem>
+		<xp:selectItem itemLabel="sort-numeric-desc"></xp:selectItem>
+		<xp:selectItem itemLabel="space-shuttle"></xp:selectItem>
+		<xp:selectItem itemLabel="spinner"></xp:selectItem>
+		<xp:selectItem itemLabel="spoon"></xp:selectItem>
+		<xp:selectItem itemLabel="square"></xp:selectItem>
+		<xp:selectItem itemLabel="square-o"></xp:selectItem>
+		<xp:selectItem itemLabel="star"></xp:selectItem>
+		<xp:selectItem itemLabel="star-half"></xp:selectItem>
+		<xp:selectItem itemLabel="star-half-o"></xp:selectItem>
+		<xp:selectItem itemLabel="star-o"></xp:selectItem>
+		<xp:selectItem itemLabel="street-view"></xp:selectItem>
+		<xp:selectItem itemLabel="suitcase"></xp:selectItem>
+		<xp:selectItem itemLabel="sun-o"></xp:selectItem>
+		<xp:selectItem itemLabel="tablet"></xp:selectItem>
+		<xp:selectItem itemLabel="tachometer"></xp:selectItem>
+		<xp:selectItem itemLabel="tag"></xp:selectItem>
+		<xp:selectItem itemLabel="tags"></xp:selectItem>
+		<xp:selectItem itemLabel="tasks"></xp:selectItem>
+		<xp:selectItem itemLabel="taxi"></xp:selectItem>
+		<xp:selectItem itemLabel="terminal"></xp:selectItem>
+		<xp:selectItem itemLabel="thumbs-down"></xp:selectItem>
+		<xp:selectItem itemLabel="thumbs-o-down"></xp:selectItem>
+		<xp:selectItem itemLabel="thumbs-o-up"></xp:selectItem>
+		<xp:selectItem itemLabel="thumbs-up"></xp:selectItem>
+		<xp:selectItem itemLabel="thumb-tack"></xp:selectItem>
+		<xp:selectItem itemLabel="ticket"></xp:selectItem>
+		<xp:selectItem itemLabel="times"></xp:selectItem>
+		<xp:selectItem itemLabel="times-circle"></xp:selectItem>
+		<xp:selectItem itemLabel="times-circle-o"></xp:selectItem>
+		<xp:selectItem itemLabel="tint"></xp:selectItem>
+		<xp:selectItem itemLabel="toggle-off"></xp:selectItem>
+		<xp:selectItem itemLabel="toggle-on"></xp:selectItem>
+		<xp:selectItem itemLabel="trash"></xp:selectItem>
+		<xp:selectItem itemLabel="trash-o"></xp:selectItem>
+		<xp:selectItem itemLabel="tree"></xp:selectItem>
+		<xp:selectItem itemLabel="trophy"></xp:selectItem>
+		<xp:selectItem itemLabel="truck"></xp:selectItem>
+		<xp:selectItem itemLabel="tty"></xp:selectItem>
+		<xp:selectItem itemLabel="umbrella"></xp:selectItem>
+		<xp:selectItem itemLabel="university"></xp:selectItem>
+		<xp:selectItem itemLabel="unlock"></xp:selectItem>
+		<xp:selectItem itemLabel="unlock-alt"></xp:selectItem>
+		<xp:selectItem itemLabel="upload"></xp:selectItem>
+		<xp:selectItem itemLabel="user"></xp:selectItem>
+		<xp:selectItem itemLabel="user-plus"></xp:selectItem>
+		<xp:selectItem itemLabel="users"></xp:selectItem>
+		<xp:selectItem itemLabel="user-secret"></xp:selectItem>
+		<xp:selectItem itemLabel="user-times"></xp:selectItem>
+		<xp:selectItem itemLabel="video-camera"></xp:selectItem>
+		<xp:selectItem itemLabel="volume-down"></xp:selectItem>
+		<xp:selectItem itemLabel="volume-off"></xp:selectItem>
+		<xp:selectItem itemLabel="volume-up"></xp:selectItem>
+		<xp:selectItem itemLabel="wheelchair"></xp:selectItem>
+		<xp:selectItem itemLabel="wifi"></xp:selectItem>
+		<xp:selectItem itemLabel="wrench"></xp:selectItem>
+	</xp:comboBox></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)"></xp:td>
+			<xp:td>アイコン画像の参照
+ <xp:link escape="true" text="Font Awesome" id="link1" value="http://fortawesome.github.io/Font-Awesome/icons/" title="Font Awesome" target="_blank"></xp:link>
+  <xp:br></xp:br>
+  ※一部、使用できないアイコンもあります。確認時に注意してください。
+  <xp:br></xp:br>
+  <xp:br></xp:br><xp:text value="#{document1.icon}" id="icon1"></xp:text></xp:td>
+		</xp:tr>
+		<xp:tr>
+			<xp:td style="background-color:rgb(128,128,255)">
+				<xp:label value="画像：" id="img_Label1" for="img1"></xp:label>
+			</xp:td>
+			<xp:td>
+
+				<xp:fileDownload rows="30" id="fileDownload1"
+					displayLastModified="false" allowDelete="true"
+					value="#{document1.thumbnail}" hideWhen="true" displaySize="false"
+					displayType="false">
+				</xp:fileDownload>
+				<xp:fileUpload id="fileUpload1"
+					value="#{document1.thumbnail}" style="width:90%">
+					<xp:eventHandler event="onchange" submit="true"
+						refreshMode="complete" id="eventHandler1">
+						<xp:this.action><![CDATA[#{javascript:// 行進用}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:fileUpload>
+			</xp:td>
+		</xp:tr>
+
+
+	</xp:table></xp:view>

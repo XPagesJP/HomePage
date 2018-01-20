@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"><xp:this.data>
+		<xp:dominoView databaseName="xpagesjp.nsf" var="view1" viewName="vSlides" />
+	</xp:this.data>
+	<xc:ccFrameSet><xp:this.facets>
+	<xc:ccView02Slides xp:key="facet_1"></xc:ccView02Slides></xp:this.facets></xc:ccFrameSet></xp:view>

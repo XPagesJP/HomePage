@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:br></xp:br>
+	<xp:table style="width:100.0%">
+		<xp:tr>
+			<xp:td style="width:100px;background-color:rgb(128,128,255)"
+				colspan="2">
+				<xp:label value="XPagesJP　ホームページ" id="label1"
+					style="color:rgb(255,255,255);font-weight:bold">
+				</xp:label>
+			&#160;
+				
+				</xp:td>
+			
+		</xp:tr>
+		<xp:tr>
+			<xp:td align="left" valign="top" style="width:100px">
+				<xp:br></xp:br>
+	<xp:button value="01.環境設定文書" id="button1" style="width:150px;height:30px"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/xpView01Config.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:button value="02.スライド一覧" id="button2" style="width:150px;height:30px"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/xpView02Slides.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:button value="03.メニュー一覧" id="button3" style="height:30px;width:150px"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/xpView03Conts.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	<xp:br></xp:br><xp:button value="04.紹介アプリ一覧" id="button5" style="height:30px;width:150px"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/xpView04Portfolios.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:button value="05.広告一覧" id="button4" style="width:150px;height:30px" rendered="false"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+	<xp:this.action>
+		<xp:openPage name="/xpView05Ads.xsp"></xp:openPage>
+	</xp:this.action></xp:eventHandler></xp:button>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+
+			</xp:td>
+			<xp:td align="left" valign="top" style="width:100%">
+				<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+			</xp:td>
+		</xp:tr>
+	</xp:table>
+
+</xp:view>
