@@ -1,21 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
- replicaid='492580C6000192B4'>
-<noteinfo noteid='26a' unid='182C558B357BDBD649257E5E00301CBD' sequence='13'>
-<created><datetime>20150608T174530,85+09</datetime></created>
-<modified><datetime>20170213T091712,66+09</datetime></modified>
-<revised><datetime>20151026T132830,21+09</datetime></revised>
-<lastaccessed><datetime>20170213T091712,66+09</datetime></lastaccessed>
-<addedtofile><datetime>20170213T091712,66+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Domino Administrator/O=EFMIYO</name><name>CN=Takeshi Yoshida/O=solxyz</name><name
->CN=Surface Administrator/O=EFMIYO</name><name>CN=Ktrick Admin/O=Ktrick</name><name
->CN=XPages Admin/O=XPages</name></updatedby>
-<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.9'
+ replicaid='49258222000FDAA9'>
+<noteinfo noteid='29a' unid='48CEBB93B7640CB749258222000FEC0D' sequence='3'>
+<created><datetime>20180127T115354,69+09</datetime></created>
+<modified><datetime>20180127T115700,98+09</datetime></modified>
+<revised><datetime>20180127T115700,97+09</datetime></revised>
+<lastaccessed><datetime>20180127T115700,97+09</datetime></lastaccessed>
+<addedtofile><datetime>20180127T115354,97+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name='$POID'><datetime>20150623T102837,91+09</datetime></item>
 <item name='$SiteMapList' sign='true'>
 <rawitemdata type='1a'>
-AQYBAAEABQBIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAFAEgARAABCAAAZAAAAAAAAAAYAAAALAAAAAAAAAAAAAAAAAAAAAAA
+AQYBAAEABgBIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAGAEgARAABCAAAZAAAAAAAAAAYAAAALAAAAAAAAAAAAAAAAAAAAAAA
 AwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFMDEuEIrCEIurEJDdEJLoEJW2EI+R
 AAEA9v8pAAAAAAADAAIABwAAAAAAAAAAAAAAAAAAAAAAAAAAAHZDb25maWc/SABEAAEIAABlAAAA
 AAAAABgAAAAsAAAAAAAAAAAAAAAAAAAAAAADAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -27,7 +25,9 @@ ADAAAAAAAAAAAAAAAAAAAAAAAAMAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTA0
 LhCP0BCJ7hCDQRCDdhCDihCI6hCXlwABAPb/LQAIAAAAAwACAAsAAAAAAAAAAAAAAAAAAAAAAAAA
 AAB2UG9ydGZvbGlvcz9IADoAAQgAAGYAAAAAAAAAEgAAACgAAAAAAAAAAAAAAAAAAAAAAAMAAgAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABTA1LhCNTBCNkBCI6hCXlwABAPb/JgAAAAAA
-AwACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAB2QWRz
+AwACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAB2QWRzSAA/AAEIAABpAAAAAAAAABUAAAAqAAAAAAAA
+AAAAAAAAAAAAAAADAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUwNi4Qg3UQg40Q
+g08QiOoQl5cAAQD2/ygAAAAAAAMAAgAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAdkJsb2dz
 </rawitemdata></item>
 <item name='$TITLE'><text>oMain</text></item>
 <item name='$Flags'><text>m</text></item>
