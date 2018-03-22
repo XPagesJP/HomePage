@@ -47,42 +47,63 @@
   		<xp:td style="background-color:rgb(128,128,255)">内容</xp:td>
   	</xp:tr>
   	<xp:tr>
-  		<xp:td style="background-color:rgb(128,128,255)">ロゴ、タイトル</xp:td>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			ロゴ、タイトル
+  		</xp:td>
   		<xp:td style="background-color:rgb(128,128,255)"></xp:td>
   	</xp:tr>
   	<xp:tr>
-  		<xp:td style="background-color:rgb(128,128,255)"><xp:label value="サイトタイトル：" id="label1" for="menus_11">
-  			</xp:label></xp:td>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="サイトタイトル：" id="label1" for="menus_11">
+  			</xp:label>
+  		</xp:td>
   		<xp:td>
   			<xp:inputText value="#{document1.site_title}"
   				id="site_title1" style="width:100%">
-  			</xp:inputText></xp:td>
-</xp:tr>
-  	<xp:tr>
-  		<xp:td style="background-color:rgb(128,128,255)"><xp:label value="ロゴ画像：" id="label2" for="menus_11">
-  			</xp:label></xp:td>
-  		<xp:td>
-  			<xp:fileDownload rows="30" id="fileDownload1" displayLastModified="false" allowDelete="true" displayType="false" displaySize="false" hideWhen="true" value="#{document1.logoimage}"></xp:fileDownload>
-  			<xp:fileUpload id="fileUpload1" value="#{document1.logoimage}" style="width:90%">
-  				<xp:eventHandler event="onchange" submit="true"
-  					refreshMode="complete">
-  					<xp:this.action><![CDATA[#{javascript:// 更新用
-}]]></xp:this.action>
-  				</xp:eventHandler></xp:fileUpload></xp:td>
+  			</xp:inputText>
+  		</xp:td>
   	</xp:tr>
   	<xp:tr>
-  		<xp:td style="background-color:rgb(128,128,255)"><xp:label value="favicon：" id="label3" for="menus_11">
-  			</xp:label></xp:td>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="ロゴ画像：" id="label2" for="menus_11">
+  			</xp:label>
+  		</xp:td>
   		<xp:td>
-  			<xp:fileDownload rows="30" id="fileDownload2" displayLastModified="false" displaySize="false" displayType="false" allowDelete="true" hideWhen="true" value="#{document1.favicon}"></xp:fileDownload>
-  			<xp:fileUpload id="fileUpload2" style="width:90%"
-  				value="#{document1.favicon}">
+  			<xp:fileDownload rows="30" id="fileDownload1"
+  				displayLastModified="false" allowDelete="true" displayType="false"
+  				displaySize="false" hideWhen="true"
+  				value="#{document1.logoimage}">
+  			</xp:fileDownload>
+  			<xp:fileUpload id="fileUpload1"
+  				value="#{document1.logoimage}" style="width:90%">
   				<xp:eventHandler event="onchange" submit="true"
-  					refreshMode="complete">
+  					refreshMode="complete" id="eventHandler1">
   					<xp:this.action><![CDATA[#{javascript:// 更新用
 }]]></xp:this.action>
   				</xp:eventHandler>
-  			</xp:fileUpload></xp:td>
+  			</xp:fileUpload>
+  		</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(128,128,255)">
+  			<xp:label value="favicon：" id="label3" for="menus_11">
+  			</xp:label>
+  		</xp:td>
+  		<xp:td>
+  			<xp:fileDownload rows="30" id="fileDownload2"
+  				displayLastModified="false" displaySize="false"
+  				displayType="false" allowDelete="true" hideWhen="true"
+  				value="#{document1.favicon}">
+  			</xp:fileDownload>
+  			<xp:fileUpload id="fileUpload2" style="width:90%"
+  				value="#{document1.favicon}">
+  				<xp:eventHandler event="onchange" submit="true"
+  					refreshMode="complete" id="eventHandler2">
+  					<xp:this.action><![CDATA[#{javascript:// 更新用
+}]]></xp:this.action>
+  				</xp:eventHandler>
+  			</xp:fileUpload>
+  		</xp:td>
   	</xp:tr>
   	<xp:tr>
   		<xp:td style="background-color:rgb(128,128,255)">メニュー</xp:td>
@@ -208,8 +229,38 @@
   		</xp:td>
   	</xp:tr>
   	<xp:tr>
-  		<xp:td style="background-color:rgb(255,128,64)">フッター<xp:br></xp:br><xp:span style="font-weight:bold">（現在機能停止中）</xp:span></xp:td>
-  		<xp:td style="background-color:rgb(255,128,64);font-weight:bold"></xp:td>
+  		<xp:td>
+  			<xp:label value="RSSフィード" id="label4"></xp:label></xp:td>
+  		<xp:td>
+  			</xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td>
+  			<xp:label value="サイトURL" id="label5"></xp:label></xp:td>
+  		<xp:td>
+  			<xp:inputText id="feedSiteURL1" style="width:100.0%" value="#{document1.feedSiteURL}"></xp:inputText></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td>
+  			<xp:label value="タイトル" id="label6"></xp:label></xp:td>
+  		<xp:td>
+  			<xp:inputText id="feedTitle1" style="width:100.0%" value="#{document1.feedTitle}"></xp:inputText></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td>
+  			<xp:label value="説明" id="label7"></xp:label></xp:td>
+  		<xp:td>
+  			<xp:inputTextarea id="feedDescription1" style="width:100.0%" value="#{document1.feedDescription}"></xp:inputTextarea></xp:td>
+  	</xp:tr>
+  	<xp:tr>
+  		<xp:td style="background-color:rgb(255,128,64)">
+  			フッター
+  			<xp:br></xp:br>
+  			<xp:span style="font-weight:bold">（現在機能停止中）</xp:span>
+  		</xp:td>
+  		<xp:td
+  			style="background-color:rgb(255,128,64);font-weight:bold">
+  		</xp:td>
   	</xp:tr>
   	<xp:tr>
   		<xp:td style="background-color:rgb(255,128,64)">
@@ -252,7 +303,9 @@
   			<xp:label value="2列目 リンク：" id="footer_page_list_Label1"
   				for="footer_page_list1">
   			</xp:label>
-  			<xp:br></xp:br>（複数可。改行して入力）</xp:td>
+  			<xp:br></xp:br>
+  			（複数可。改行して入力）
+  		</xp:td>
   		<xp:td>
   			<xp:inputTextarea value="#{document1.footer_page_list}"
   				id="footer_page_list1" style="height:100px;width:100%">
