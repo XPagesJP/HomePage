@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
- replicaid='492580C6000192B4'>
-<noteinfo noteid='29e' unid='11A23F798F37C3BB49257E840051994C' sequence='13'>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.10'
+ replicaid='4925811500505B11'>
+<noteinfo noteid='29e' unid='11A23F798F37C3BB49257E840051994C' sequence='16'>
 <created><datetime>20150716T235116,60+09</datetime></created>
-<modified><datetime>20170213T091712,92+09</datetime></modified>
-<revised><datetime>20151026T132832,72+09</datetime></revised>
-<lastaccessed><datetime>20170213T091712,92+09</datetime></lastaccessed>
-<addedtofile><datetime>20170213T091712,92+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Ktrick Admin/O=Ktrick</name><name>CN=XPages Admin/O=XPages</name></updatedby>
+<modified><datetime>20180322T105640,69+09</datetime></modified>
+<revised><datetime>20180322T105640,68+09</datetime></revised>
+<lastaccessed><datetime>20180322T105640,69+09</datetime></lastaccessed>
+<addedtofile><datetime>20170503T233743,94+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
 <wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
 <item name='$FormulaClass' sign='true'><text>1</text></item>
 <item name='$TITLE' sign='true'><text>vPortfolios</text></item>

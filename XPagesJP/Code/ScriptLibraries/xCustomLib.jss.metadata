@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.0" replicaid="492580C6000192B4" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="29a" sequence="22" unid="5CC8678009D6D02349257E84005D1533">
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.10" replicaid="4925811500505B11" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="29a" sequence="26" unid="5CC8678009D6D02349257E84005D1533">
 <created><datetime>20150717T015642,75+09</datetime></created>
-<modified><datetime>20170216T161232,27+09</datetime></modified>
-<revised><datetime>20170216T161232,26+09</datetime></revised>
-<lastaccessed><datetime>20170216T161232,27+09</datetime></lastaccessed>
-<addedtofile><datetime>20170213T091712,90+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Ktrick Admin/O=Ktrick</name><name>CN=XPages Admin/O=XPages</name><name>CN=Kazunori Tatsuki/O=Ktrick</name></updatedby>
-<wassignedby><name>CN=Kazunori Tatsuki/O=Ktrick</name></wassignedby>
+<modified><datetime>20180322T105640,80+09</datetime></modified>
+<revised><datetime>20180322T105640,79+09</datetime></revised>
+<lastaccessed><datetime>20180322T105640,80+09</datetime></lastaccessed>
+<addedtofile><datetime>20170503T233743,92+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
+<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
 <item name="$TITLE" sign="true"><text>xCustomLib</text></item>
 <item name="$Flags"><text>.5834Q</text></item>
 <item name="$PublicAccess" sign="true"><text>1</text></item>
