@@ -13,6 +13,7 @@
 	-->
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">
 	<xp:this.resources>
+		<xp:script src="/xCustomLib.jss" clientSide="false"></xp:script>
 		<xp:script src="/ssjsFeedGenerator.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 	<xp:this.afterRenderResponse><![CDATA[#{javascript:

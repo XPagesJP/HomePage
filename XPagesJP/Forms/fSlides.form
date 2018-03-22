@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.10'
- replicaid='4925811500505B11'>
-<noteinfo noteid='25e' unid='62D0211756428F6549257E5E002F570A' sequence='19'>
+ replicaid='49258258004EF561'>
+<noteinfo noteid='25e' unid='62D0211756428F6549257E5E002F570A' sequence='20'>
 <created><datetime>20150608T173704,74+09</datetime></created>
-<modified><datetime>20180322T105638,88+09</datetime></modified>
-<revised><datetime>20180322T105638,87+09</datetime></revised>
-<lastaccessed><datetime>20180322T105638,88+09</datetime></lastaccessed>
-<addedtofile><datetime>20170503T233743,62+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
-<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<modified><datetime>20180322T232348,69+09</datetime></modified>
+<revised><datetime>20180322T232348,68+09</datetime></revised>
+<lastaccessed><datetime>20180322T232348,68+09</datetime></lastaccessed>
+<addedtofile><datetime>20180322T232227,95+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name='$Comment' sign='true'><text/></item>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>

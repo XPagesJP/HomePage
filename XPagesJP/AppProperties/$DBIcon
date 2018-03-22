@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.10'
- replicaid='4925811500505B11'>
-<noteinfo noteid='276' unid='46811BE93ACC76B549257E5F0027CC88' sequence='10'>
+ replicaid='49258258004EF561'>
+<noteinfo noteid='276' unid='46811BE93ACC76B549257E5F0027CC88' sequence='11'>
 <created><datetime>20150609T161442,64+09</datetime></created>
-<modified><datetime>20180322T105640,82+09</datetime></modified>
-<revised><datetime>20180322T105640,81+09</datetime></revised>
-<lastaccessed><datetime>20180322T105640,82+09</datetime></lastaccessed>
-<addedtofile><datetime>20170503T233743,74+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
-<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<modified><datetime>20180322T232349,61+09</datetime></modified>
+<revised><datetime>20180322T232349,60+09</datetime></revised>
+<lastaccessed><datetime>20180322T232349,60+09</datetime></lastaccessed>
+<addedtofile><datetime>20180322T232228,07+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name='$TITLE'><text>$DBIcon</text></item>
 <item name='$Flags'><text>34Ci~Q</text></item>
 <item name='$ImagesWide' sign='true'><number>1</number></item>

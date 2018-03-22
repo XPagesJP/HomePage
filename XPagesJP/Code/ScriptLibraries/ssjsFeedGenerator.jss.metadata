@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.9" replicaid="49258222000FDAA9" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="342" sequence="1" unid="DBEF09E006D316EF4925822200105F77">
-<created><datetime>20180127T115850,15+09</datetime></created>
-<modified><datetime>20180127T115851,59+09</datetime></modified>
-<revised><datetime>20180127T115851,58+09</datetime></revised>
-<lastaccessed><datetime>20180127T115851,58+09</datetime></lastaccessed>
-<addedtofile><datetime>20180127T115851,58+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Domino Administrator/O=EFMIYO</name><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.10" replicaid="49258258004EF561" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2fe" sequence="100" unid="B7B03189E541E33A49258194004B3445">
+<created><datetime>20170907T224125,81+09</datetime></created>
+<modified><datetime>20180322T232349,43+09</datetime></modified>
+<revised><datetime>20180322T232349,42+09</datetime></revised>
+<lastaccessed><datetime>20180322T232349,42+09</datetime></lastaccessed>
+<addedtofile><datetime>20180322T232228,73+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
 <wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name="$TITLE" sign="true"><text>ssjsFeedGenerator</text></item>
 <item name="$Flags"><text>.5834Q</text></item>

@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.10'
- replicaid='4925811500505B11'>
-<noteinfo noteid='272' unid='ABFB0E15AECEE1A549257E5E00304D80' sequence='16'>
+ replicaid='49258258004EF561'>
+<noteinfo noteid='272' unid='ABFB0E15AECEE1A549257E5E00304D80' sequence='17'>
 <created><datetime>20150608T174735,68+09</datetime></created>
-<modified><datetime>20180322T105638,52+09</datetime></modified>
-<revised><datetime>20180322T105638,51+09</datetime></revised>
-<lastaccessed><datetime>20180322T105638,52+09</datetime></lastaccessed>
-<addedtofile><datetime>20170503T233743,72+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
-<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<modified><datetime>20180322T232348,65+09</datetime></modified>
+<revised><datetime>20180322T232348,64+09</datetime></revised>
+<lastaccessed><datetime>20180322T232348,64+09</datetime></lastaccessed>
+<addedtofile><datetime>20180322T232228,05+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name='$TITLE' sign='true'><text>fMain</text></item>
 <item name='$Comment' sign='true'><text/></item>
 <item name='$FrameSet' sign='true'>

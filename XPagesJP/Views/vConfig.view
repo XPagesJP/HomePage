@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.10'
- replicaid='4925811500505B11'>
-<noteinfo noteid='266' unid='6559DD437DF8C72949257E5E00300845' sequence='12'>
+ replicaid='492582580050CC8D'>
+<noteinfo noteid='2e6' unid='6559DD437DF8C72949257E5E00300845' sequence='16'>
 <created><datetime>20150608T174438,45+09</datetime></created>
-<modified><datetime>20180322T105640,63+09</datetime></modified>
-<revised><datetime>20180322T105640,62+09</datetime></revised>
-<lastaccessed><datetime>20180322T105640,63+09</datetime></lastaccessed>
-<addedtofile><datetime>20170503T233743,66+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
-<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<modified><datetime>20180322T235702,22+09</datetime></modified>
+<revised><datetime>20180322T235702,21+09</datetime></revised>
+<lastaccessed><datetime>20180322T235702,21+09</datetime></lastaccessed>
+<addedtofile><datetime>20180322T234256,00+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name='$FormulaClass' sign='true'><text>1</text></item>
 <item name='$TITLE' sign='true'><text>vConfig</text></item>
 <item name='$Index' sign='true'><text/></item>
@@ -33,17 +33,17 @@ AP//AAAAAAAAAAAAAAAAAABCABAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEA
 </rawitemdata></item>
 <item name='$Comment' sign='true'><text/></item>
 <item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
 <item name='$V5ACTIONS' sign='true'>
 <rawitemdata type='1'>
 vRw/AAAAAQABAAAACAAAAAAAAAAAAAAACAACAHn/bAABAO/v7wABAAAAAAAJAAAAAAABAO/v7wAA
 AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/zYAAAABAHAAngEAAAAAAAAAAAAAIAAAABIAAgD8EQAA
-AAAAAO0BAwAHAAwABQAJMFMwRQC+/9gAAAABAAUAngEAABsAAAAAAAAAEIrCEIurEJDdEJLoEJW2
-EI+REILMEJXSEI9XAKYAAQA8AAMAdG1wAAEABQBOb3RlcwABAAcATm9DYWNoZQAfAosAAQAGACgk
-QWxsKQAAAAAAAAAA8D+qBAMABwAMAAUACTFTMlMAAABSAAUAAwB0bXAAAQAAAAoCBQADAHRtcABa
-AR0CrwAwABwAAgDoAwAAAAAAAAEABQBmSG9tZQDtAq4AFAACAOgHAAAAAAAA7QGuAAQAtQMDAAcA
-CgADAAkwUgA=
+AAAAAO0BAwAHAAwABQAJMFMwRQC+/9wAAAABAAUAngEAABsAAAAAAAAAEIrCEIurEJDdEJLoEJW2
+EI+REILMEJXSEI9XAKoAAQA+AAMAdG1wAAEABQBOb3RlcwABAAcATm9DYWNoZQAfAosAAQAHAHZD
+b25maWcAAAAAAAAAAADwP6oEAwAHAAwABQAJMVMyUwAAAFQABQADAHRtcAABAAAACgIFAAMAdG1w
+AFoBHQKvADIAHgACAOgDAAAAAAAAAQAHAGZDb25maWcA7QKuABQAAgDoBwAAAAAAAO0BrgAEALUD
+AwAHAAoAAwAJMFIA
 </rawitemdata></item></note>
 

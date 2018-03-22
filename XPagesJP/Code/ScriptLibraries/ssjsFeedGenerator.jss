@@ -25,11 +25,15 @@ function FeedGenerator() {
 		var format:String;
 		
 		// Feed information
-		FEED_LINK_SELF = "https://www.xpages.jp/xpagesjp.nsf";
-		feedTitle    = "XPages.JP";
-		feedSubtitle = "XPages.JP の活動からの成果物や連絡事項などをブログで情報発信をしていきます。";
-		feedLink     = "https://www.xpages.jp/xpagesjp.nsf";
-		feedIcon     = "https://www.xpages.jp/xpagesjp.nsf?OpenIcon";
+		// var siteURL    = "https://www.xpages.jp/xpagesjp.nsf";
+		// feedTitle      = "XPages.JP";
+		// feedSubtitle   = "XPages.JP の活動からの成果物や連絡事項などをブログで情報発信をしていきます。";
+		var siteURL    = getProfileValue( "feedSiteURL" );
+		FEED_LINK_SELF = siteURL;
+		feedTitle      = getProfileValue( "feedTitle" );
+		feedSubtitle   = getProfileValue( "feedDescription" );
+		feedLink       = siteURL;
+		feedIcon       = siteURL + "?OpenIcon";
 		
 		entryCount = FEED_STD_ENTRY_COUNT;
 		if ( context.getUrl().hasParameter("count") ) {
