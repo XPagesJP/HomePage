@@ -34,7 +34,7 @@ return title +" | " + siteTitle;}]]></xp:this.pageTitle>
 						</xp:text>
 						<span class="label label-warning">RSS</span>
 						&#160;
-						<xp:link text="投稿">
+						<xp:link text="購読">
 							<xp:this.value><![CDATA[#{javascript:"feed.xsp"}]]></xp:this.value>
 						</xp:link>
 					</xp:div>
