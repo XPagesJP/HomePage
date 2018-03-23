@@ -25,11 +25,8 @@ function FeedGenerator() {
 		var format:String;
 		
 		// Feed information
-		// var siteURL    = "https://www.xpages.jp/xpagesjp.nsf";
-		// feedTitle      = "XPages.JP";
-		// feedSubtitle   = "XPages.JP の活動からの成果物や連絡事項などをブログで情報発信をしていきます。";
 		var siteURL    = getProfileValue( "feedSiteURL" );
-		FEED_LINK_SELF = siteURL;
+		FEED_LINK_SELF = siteURL + "/blogs.xsp";
 		feedTitle      = getProfileValue( "feedTitle" );
 		feedSubtitle   = getProfileValue( "feedDescription" );
 		feedLink       = siteURL;
