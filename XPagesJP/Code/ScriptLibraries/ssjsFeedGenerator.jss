@@ -26,7 +26,7 @@ function FeedGenerator() {
 		
 		// Feed information
 		var siteURL    = getProfileValue( "feedSiteURL" );
-		FEED_LINK_SELF = siteURL + "/blogs.xsp";
+		FEED_LINK_SELF = siteURL + "/feed.xsp";
 		feedTitle      = getProfileValue( "feedTitle" );
 		feedSubtitle   = getProfileValue( "feedDescription" );
 		feedLink       = siteURL;
