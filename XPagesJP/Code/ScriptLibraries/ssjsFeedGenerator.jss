@@ -26,7 +26,7 @@ function FeedGenerator() {
 		
 		// Feed information
 		var siteURL    = getProfileValue( "feedSiteURL" );
-		FEED_LINK_SELF = siteURL + "/feed.xsp";
+		FEED_LINK_SELF = siteURL;
 		feedTitle      = getProfileValue( "feedTitle" );
 		feedSubtitle   = getProfileValue( "feedDescription" );
 		feedLink       = siteURL;
@@ -93,7 +93,7 @@ function FeedFormatter(feedFormat) {
 					sb.append('\t<subtitle>').append(feedInfo["Subtitle"]).append('</subtitle>\n');
 				}
 				sb.append('\t<link href="').append(escapeHTML(feedInfo["Link"])).append('" />\n');
-				sb.append('\t<link rel="self" href="').append(FEED_LINK_SELF).append('?format=').append(feedFormat).append('&amp;count=' + entryCount.toString()).append('" />\n');
+				sb.append('\t<link rel="self" href="').append(FEED_LINK_SELF + "/feed.xsp").append('?format=').append(feedFormat).append('&amp;count=' + entryCount.toString()).append('" />\n');
 				sb.append('\t<id>').append(escapeHTML(feedInfo["ID"])).append('</id>\n');
 				temp = dateFormat.format(feedInfo["Updated"]);
 				sb.append('\t<updated>').append(temp.substr(0, temp.length-2) + ":").append(temp.substr(temp.length-2, 2)).append('</updated>\n');
@@ -109,7 +109,7 @@ function FeedFormatter(feedFormat) {
 					sb.append('\t\t<description>').append(feedInfo["Subtitle"]).append('</description>\n');
 				}
 				sb.append('\t\t<link>').append(escapeHTML(feedInfo["Link"])).append('</link>\n');
-				sb.append('\t\t<atom:link rel="self" type="application/rss+xml" href="').append(FEED_LINK_SELF).append('?format=').append(feedFormat).append('&amp;count=' + entryCount.toString()).append('" />\n');
+				sb.append('\t\t<atom:link rel="self" type="application/rss+xml" href="').append(FEED_LINK_SELF + "/feed.xsp").append('?format=').append(feedFormat).append('&amp;count=' + entryCount.toString()).append('" />\n');
 				sb.append('\t\t<lastBuildDate>').append(dateFormat.format(feedInfo["Updated"])).append('</lastBuildDate>\n');
 				sb.append('\t\t<image>\n');
 				sb.append('\t\t\t<url>' + feedIcon + '</url>\n');
