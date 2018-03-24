@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- maintenanceversion='1.0' replicaid='492580C60001993D'>
-<noteinfo noteid='11a' unid='012E2A38882F3F0449257E6D000DBEEC' sequence='29'>
+ maintenanceversion='1.10' replicaid='49258115004F3D77'>
+<noteinfo noteid='112' unid='012E2A38882F3F0449257E6D000DBEEC' sequence='34'>
 <created><datetime>20150623T113008,44+09</datetime></created>
-<modified><datetime>20170213T091728,29+09</datetime></modified>
-<revised><datetime>20170213T091728,28+09</datetime></revised>
-<lastaccessed><datetime>20170213T091728,29+09</datetime></lastaccessed>
-<addedtofile><datetime>20170213T091727,73+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Administrator/O=test</name><name>CN=Takeshi Yoshida/O=solxyz</name><name
->CN=XPages Admin/O=XPages</name></updatedby>
+<modified><datetime>20180323T071949,83+09</datetime></modified>
+<revised><datetime>20180323T071949,82+09</datetime></revised>
+<lastaccessed><datetime>20180323T071949,83+09</datetime></lastaccessed>
+<addedtofile><datetime>20170503T232530,93+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
+<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
 <item name='IconBitmap' summary='true' sign='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///4Af//8AD//4AAH/8AAA/+AAAH/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAA
@@ -30,5 +30,7 @@ AAAAAAACICABAAD/////+A4DgA==
 <item name='$LaunchXPageRunOnServer' sign='true'><text>1</text></item>
 <item name='$FlagsNoRefresh' sign='true'><text/></item>
 <item name='$Daos'><text>0</text></item>
-<item name='$TITLE'><text>XPagesJP コンテンツ管理テスト用</text></item></note>
+<item name='$LargeSummary'><text>0</text></item>
+<item name='$TITLE'><text>XPagesJP コンテンツ管理 Template
+</text></item></note>
 
