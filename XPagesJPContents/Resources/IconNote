@@ -1,14 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
  maintenanceversion='1.10' replicaid='49258115004F3D77'>
-<noteinfo noteid='112' unid='012E2A38882F3F0449257E6D000DBEEC' sequence='34'>
+<noteinfo noteid='112' unid='012E2A38882F3F0449257E6D000DBEEC' sequence='36'>
 <created><datetime>20150623T113008,44+09</datetime></created>
-<modified><datetime>20180323T071949,83+09</datetime></modified>
-<revised><datetime>20180323T071949,82+09</datetime></revised>
-<lastaccessed><datetime>20180323T071949,83+09</datetime></lastaccessed>
+<modified><datetime>20180628T171946,64+09</datetime></modified>
+<revised><datetime>20180628T171946,63+09</datetime></revised>
+<lastaccessed><datetime>20180628T171946,64+09</datetime></lastaccessed>
 <addedtofile><datetime>20170503T232530,93+09</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
-<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
 <item name='IconBitmap' summary='true' sign='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///4Af//8AD//4AAH/8AAA/+AAAH/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAA
@@ -24,13 +23,12 @@ d30fAAAAAPHXd33Xd3d913d9HwAAAADx13d913d3fdd3fR8AAAAA8R3d0dd3d30d3dEfAAAAAA8R
 EREdd3fRERER8AAAAAAA////Ed3dEf///wAAAAAAAAAAAPERER8AAAAAAAAAAAAAAAAP///wAAAA
 AAAAAAACICABAAD/////+A4DgA==
 </rawitemdata></item>
-<item name='$DefaultClientXPage' sign='true'><text>xpView01Config.xsp</text></item>
-<item name='$DefaultXPage' sign='true'><text>xpView01Config.xsp</text></item>
-<item name='$Flags'><text>Jz?!</text></item>
 <item name='$LaunchXPageRunOnServer' sign='true'><text>1</text></item>
-<item name='$FlagsNoRefresh' sign='true'><text/></item>
 <item name='$Daos'><text>0</text></item>
 <item name='$LargeSummary'><text>0</text></item>
-<item name='$TITLE'><text>XPagesJP コンテンツ管理 Template
-</text></item></note>
+<item name='$DefaultClientXPage'><text>xpView01Config.xsp</text></item>
+<item name='$DefaultXPage'><text>xpView01Config.xsp</text></item>
+<item name='$TITLE'><text>XPagesJP コンテンツ管理 Template</text></item>
+<item name='$Flags'><text>Jz7?!</text></item>
+<item name='$FlagsNoRefresh'><text>rv</text></item></note>
 

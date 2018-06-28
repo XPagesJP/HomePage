@@ -48,7 +48,7 @@
 	<xp:br></xp:br>
 	<xp:button value="6.BLOGS" id="button6" style="height:30.0px;width:150.0px"><xp:eventHandler event="onclick" submit="true" refreshMode="complete">
 	<xp:this.action>
-		<xp:openPage name="/xpForm06Blogs.xsp"></xp:openPage>
+		<xp:openPage name="/xpView06Blogs.xsp"></xp:openPage>
 	</xp:this.action></xp:eventHandler></xp:button>
 	<xp:br></xp:br>
 	<xp:br></xp:br>

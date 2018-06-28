@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.10" replicaid="492582B600432FDB" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1a2" sequence="8" unid="BDAA0FDC51A6FCC1492582B6004330B1">
-<created><datetime>20180624T211353,77+09</datetime></created>
-<modified><datetime>20180624T211356,83+09</datetime></modified>
-<revised><datetime>20180624T211356,82+09</datetime></revised>
-<lastaccessed><datetime>20180624T211356,82+09</datetime></lastaccessed>
-<addedtofile><datetime>20180624T211354,12+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
-<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.10" replicaid="49258115004F3D77" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="196" sequence="32" unid="E83C628C1616F51A492580C200172751">
+<created><datetime>20170209T131253,93+09</datetime></created>
+<modified><datetime>20180628T172349,40+09</datetime></modified>
+<revised><datetime>20180628T172349,39+09</datetime></revised>
+<lastaccessed><datetime>20180628T172349,40+09</datetime></lastaccessed>
+<addedtofile><datetime>20170503T232532,37+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
+<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
 <item name="$TITLE"><text>xpForm06Blogs.xsp</text></item>
 <item name="$Flags"><text>gC~4K</text></item>
-
-
-
-<item name="$FileNames" sign="true"><text>xpForm06Blogs.xsp</text></item>
 <item name="$DesignerVersion"><text>8.5.2</text></item>
 
 
 
 
 
-</note>
+
+
+
+
+<item name="$FileNames" sign="true"><text>xpForm06Blogs.xsp</text></item></note>

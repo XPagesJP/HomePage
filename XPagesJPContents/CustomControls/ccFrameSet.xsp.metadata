@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.10" replicaid="492582B600432FDB" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="16a" sequence="10" unid="57DFDEB355DCD983492582B600433072">
-<created><datetime>20180624T211353,14+09</datetime></created>
-<modified><datetime>20180624T211609,71+09</datetime></modified>
-<revised><datetime>20180624T211609,70+09</datetime></revised>
-<lastaccessed><datetime>20180624T211609,70+09</datetime></lastaccessed>
-<addedtofile><datetime>20180624T211353,18+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
-<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.10" replicaid="49258115004F3D77" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="172" sequence="79" unid="C7029D8DBD2F37B449257E6D001CC5CA">
+<created><datetime>20150623T141416,42+09</datetime></created>
+<modified><datetime>20180628T172520,65+09</datetime></modified>
+<revised><datetime>20180628T172520,64+09</datetime></revised>
+<lastaccessed><datetime>20180628T172520,65+09</datetime></lastaccessed>
+<addedtofile><datetime>20170503T232531,84+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
+<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
 <item name="$TITLE" sign="true"><text>ccFrameSet.xsp</text></item>
+
+
 <item name="$DesignerVersion"><text>8.5</text></item>
 
 
@@ -17,6 +19,4 @@
 
 
 
-<item name="$FileNames" sign="true"><text>ccFrameSet.xsp</text></item>
-
-</note>
+<item name="$FileNames" sign="true"><text>ccFrameSet.xsp</text></item></note>

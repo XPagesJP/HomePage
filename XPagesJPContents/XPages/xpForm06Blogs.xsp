@@ -4,7 +4,7 @@
 
 	<xp:this.data>
 		<xp:dominoDocument computeWithForm="both" formName="fBlogs"
-			databaseName="xpagesjp\xpagesjp.nsf" var="document1">
+			databaseName="xpagesjp.nsf" var="document1">
 			<xp:this.postSaveDocument><![CDATA[#{javascript:var srvName = session.getServerName();
 var dbName = database.getFileName();
 var doc1:NotesDocument = document1.getDocument();
