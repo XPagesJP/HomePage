@@ -5,6 +5,7 @@
 	<xp:this.data>
 		<xp:dominoDocument computeWithForm="both" formName="fBlogs"
 			databaseName="xpagesjp.nsf" var="document1">
+<!--
 			<xp:this.postSaveDocument><![CDATA[#{javascript:var srvName = session.getServerName();
 var dbName = database.getFileName();
 var doc1:NotesDocument = document1.getDocument();
@@ -35,6 +36,7 @@ if (conn.getResponseCode() == "200") {
     doc1.replaceItemValue(fldName+"Html", strContent);
 	doc1.save(); 
 }}]]></xp:this.postSaveDocument>
+-->
 		</xp:dominoDocument>
 	</xp:this.data>
 
@@ -82,6 +84,7 @@ if(document1.isNewNote() && pubType == "1"){
 					<xp:eventHandler event="onclick" submit="true"
 						refreshMode="norefresh" immediate="true">
 						<xp:this.script><![CDATA[var path = location.pathname.split('.nsf')[0] + '.nsf';
+path = path.replace("XPagesJPContents","XPagesJP");
 var unid = "#{javascript:document1.getDocument().getUniversalID()}";
 var e_href = path+"/blog.xsp?preview=true&action=openDocument&documentId="+unid;
 window.open(e_href,'_blank');]]></xp:this.script>
