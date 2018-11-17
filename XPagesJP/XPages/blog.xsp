@@ -69,6 +69,12 @@ if(bPublic == false && preview != "true"){
 		</main>
 		</div>
 		</section>
+		<div style="display:block;text-align:right">
+			<!-- shinobi ct2 -->
+			<script type="text/javascript" src="//ct2.shinobi.jp/sc/1742884"></script>
+			<noscript><a href="//ct2.shinobi.jp/gg/1742884"><img src="//ct2.shinobi.jp/ll/1742884" border="0" alt="カウンター" /></a></noscript>
+			<!-- /shinobi ct2 -->
+		</div>
 		<xc:footer></xc:footer>
 	</div>
 </xp:view>
