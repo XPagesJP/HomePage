@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.10" replicaid="4925811500505B11" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="2e6" sequence="15" unid="30F62CC306E1C86A492580C9002720D2">
-<created><datetime>20170216T160723,06+09</datetime></created>
-<modified><datetime>20180322T105638,10+09</datetime></modified>
-<revised><datetime>20180322T105638,09+09</datetime></revised>
-<lastaccessed><datetime>20180322T105638,10+09</datetime></lastaccessed>
-<addedtofile><datetime>20170503T233744,30+09</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=XPages Admin/O=XPages</name></updatedby>
-<wassignedby><name>CN=XPages Admin/O=XPages</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.10" replicaid="4925834800145C99" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2fa" sequence="8" unid="325E4AF32A13C9614925834800145E7D">
+<created><datetime>20181117T124229,09+09</datetime></created>
+<modified><datetime>20181117T124416,50+09</datetime></modified>
+<revised><datetime>20181117T124416,49+09</datetime></revised>
+<lastaccessed><datetime>20181117T124416,49+09</datetime></lastaccessed>
+<addedtofile><datetime>20181117T124230,85+09</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Domino Administrator/O=EFLAB</name></updatedby>
+<wassignedby><name>CN=Domino Administrator/O=EFLAB</name></wassignedby>
 <item name="$TITLE"><text>blog.xsp</text></item>
 <item name="$Flags"><text>gC~4K</text></item>
-
-
-<item name="$FileNames" sign="true"><text>blog.xsp</text></item>
 <item name="$DesignerVersion"><text>8.5.2</text></item>
 
 
 
 
-</note>
+
+
+
+<item name="$FileNames" sign="true"><text>blog.xsp</text></item></note>
