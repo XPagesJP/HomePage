@@ -68,7 +68,7 @@ return cDoc.getUniversalID();}]]></xp:this.documentId>
 							<div class="cta-text">
 								<h2>
 									<span>
-										XPages.jp で、Notes/Dominoの開発に関する情報発信サイトです
+										XPages.jp は、Notes/Dominoの開発に関する情報発信サイトです
 									</span>
 								</h2>
 								XPages、Nomad、Verse、進化し続けるNotes/Dominoの魅力を、開発者の視点から掘り下げていきます。
