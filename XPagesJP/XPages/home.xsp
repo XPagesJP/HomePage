@@ -44,7 +44,7 @@ return cDoc.getUniversalID();}]]></xp:this.documentId>
 													<xp:this.value><![CDATA[#{javascript:vsRowData.getColumnValue( "description" )}]]></xp:this.value>
 												</xp:text>
 											</xp:paragraph>
-											<xp:link escape="true"
+											<xp:link escape="true" target="_blank"
 												styleClass="btn btn-theme">
 												<xp:this.text><![CDATA[#{javascript:vsRowData.getColumnValue( "btnLabel" )}]]></xp:this.text>
 												<xp:this.value><![CDATA[#{javascript:vsRowData.getColumnValue( "url" )}]]></xp:this.value>

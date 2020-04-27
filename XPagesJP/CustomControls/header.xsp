@@ -31,14 +31,17 @@
 					</xp:link>
 				</div>
 				<xc:mainManu></xc:mainManu>
-				<xp:panel style="text-align:left">
 				
+				<!-- 
+				<xp:panel style="text-align:left">
 					<script async="async" defer="defer" src="https://tektek-slack.mybluemix.net/slackin.js?large"></script>
 					<br />
 					<xp:label id="label1">
 						<xp:this.value><![CDATA[テクてく Lotus 技術者 Slack に参加しよう！]]></xp:this.value>
 					</xp:label>
 				</xp:panel>
+				 -->
+				
 			</div>
 		</div>
 	</header>
